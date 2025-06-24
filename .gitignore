@@ -1,0 +1,5 @@
+jetbrains_cache/
+.cache/
+speechbrain/
+test_venv/
+
