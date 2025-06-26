@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="rewrote missing shell script" />
+    <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="removed my_test_script.py">
+      <change afterPath="$PROJECT_DIR$/code/owsm_ctc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/run_owsm.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/tedtest_owsm-ctc_baseline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/wavlm_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/init_env.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/init_env.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,11 +53,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.owsm_ctc.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHELLCHECK.PATH": "/home/tc068/tc068/jiangyue_zhu/.local/share/JetBrains/PyCharm2025.1/Shell Script/shellcheck",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/mnt/lustre/e1000/home/tc068/tc068/jiangyue_zhu/code",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,7 +76,7 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2023237" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30429688" />
       <window_info id="Commit" order="1" weight="0.2023237" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -78,11 +87,11 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32932013" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3930595" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.28257978" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.2811615" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32932013" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32932013" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
@@ -98,6 +107,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/code" />
     </key>
   </component>
@@ -121,7 +133,9 @@
       <workItem from="1750587856271" duration="10548000" />
       <workItem from="1750755435148" duration="1294000" />
       <workItem from="1750774248753" duration="286000" />
-      <workItem from="1750774615553" duration="5994000" />
+      <workItem from="1750774615553" duration="8422000" />
+      <workItem from="1750791821660" duration="1000000" />
+      <workItem from="1750931736444" duration="29084000" />
     </task>
     <task id="LOCAL-00001" summary="rewrote missing shell script">
       <option name="closed" value="true" />
@@ -139,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750779404944</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed my_test_script.py">
+      <option name="closed" value="true" />
+      <created>1750780661695</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750780661695</updated>
+    </task>
+    <task id="LOCAL-00004" summary="removed my_test_script.py">
+      <option name="closed" value="true" />
+      <created>1750780692903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750780692903</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +177,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rewrote missing shell script" />
-    <option name="LAST_COMMIT_MESSAGE" value="rewrote missing shell script" />
+    <MESSAGE value="removed my_test_script.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed my_test_script.py" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jiangyue_zhu$owsm_ctc.coverage" NAME="owsm_ctc Coverage Results" MODIFIED="1750935767860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
 </project>
