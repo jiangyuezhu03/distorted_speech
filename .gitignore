@@ -1,0 +1,5 @@
+jetbrains_cache/
+.cache/
+espnet/
+speechbrain/
+*.tar.gz

@@ -1,0 +1,448 @@
+<project version="4">
+  <component name="JSRemoteModulesUsagesDetector">
+    <modules>
+      <module url="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" />
+      <module url="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" />
+      <module url="https://cdn.plot.ly/plotly-2.17.0.min.js" />
+      <module url="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.4.9/jquery.sumoselect.min.js" />
+      <module url="https://requirejs.org/docs/release/2.3.6/minified/require.js" />
+    </modules>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <directories>
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/angular/angular-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/vitest-intellij/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/jsLanguageServicesImpl/typescript/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/angular/angular-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/vitest-intellij/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/jsLanguageServicesImpl/typescript/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/angular/angular-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/vitest-intellij/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/jsLanguageServicesImpl/typescript/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/angular/angular-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/javascript-plugin/jsLanguageServicesImpl/typescript/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/nodeJS/js/ts-file-loader/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/vuejs/vue-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/angular/angular-service/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/vitest-intellij/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/jsLanguageServicesImpl/typescript/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/node_modules" />
+      <directory path="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-service/node_modules" />
+    </directories>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/espnet/doc/vuepress/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/test/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/languageService/eslint/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/karma/js_reporter/karma-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/mocha-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/adoc/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bat/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicep/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicepparam/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/clojure/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cmake/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/coffeescript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cpp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/csharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/css/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/dart/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/diff/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/docker/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/erlang/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/fsharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/git-base/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/go/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/groovy/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/handlebars/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hcl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hlsl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/html/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ini/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/java/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/javascript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/json/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/jsp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/julia/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/kconfig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/latex/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/less/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/log/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/lua/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/make/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-math/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/mdx/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/objective-c/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/perl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/php/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/powershell/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/pug/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/python/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/r/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/razor/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/restructuredtext/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ruby/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/rust/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/scss/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/search-result/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shaderlab/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shellscript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/sql/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/swift/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/terraform/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/twig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/typescript-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/vb/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/viml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/xml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/yaml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-language-server/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/test/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/languageService/eslint/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/karma/js_reporter/karma-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/mocha-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/adoc/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bat/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicep/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicepparam/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/clojure/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cmake/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/coffeescript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cpp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/csharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/css/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/dart/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/diff/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/docker/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/erlang/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/fsharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/git-base/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/go/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/groovy/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/handlebars/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hcl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hlsl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/html/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ini/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/java/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/javascript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/json/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/jsp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/julia/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/kconfig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/latex/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/less/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/log/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/lua/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/make/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-math/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/mdx/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/objective-c/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/perl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/php/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/powershell/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/pug/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/python/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/r/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/razor/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/restructuredtext/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ruby/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/rust/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/scss/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/search-result/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shaderlab/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shellscript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/sql/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/swift/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/terraform/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/twig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/typescript-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/vb/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/viml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/xml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/yaml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cach/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cach_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-language-server/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/test/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/languageService/eslint/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/karma/js_reporter/karma-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/mocha-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/adoc/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bat/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicep/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicepparam/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/clojure/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cmake/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/coffeescript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cpp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/csharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/css/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/dart/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/diff/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/docker/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/erlang/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/fsharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/git-base/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/go/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/groovy/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/handlebars/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hcl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hlsl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/html/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ini/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/java/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/javascript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/json/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/jsp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/julia/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/kconfig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/latex/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/less/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/log/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/lua/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/make/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-math/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/mdx/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/objective-c/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/perl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/php/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/powershell/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/pug/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/python/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/r/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/razor/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/restructuredtext/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ruby/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/rust/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/scss/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/search-result/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shaderlab/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shellscript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/sql/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/swift/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/terraform/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/twig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/typescript-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/vb/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/viml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/xml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/yaml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-language-server/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/javascript-plugin/helpers/package-version-range-matcher/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/javascript-plugin/helpers/package-version-range-matcher/test/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/javascript-plugin/languageService/eslint/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/karma/js_reporter/karma-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/nodeJS/js/mocha-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/nodeJS/js/ts-file-loader/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/adoc/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/bat/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/bicep/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/bicepparam/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/clojure/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/cmake/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/coffeescript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/cpp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/csharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/css/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/dart/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/diff/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/docker/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/erlang/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/fsharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/git-base/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/go/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/groovy/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/handlebars/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/hcl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/hlsl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/html/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/ini/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/java/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/javascript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/json/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/jsp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/julia/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/kconfig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/latex/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/less/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/log/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/lua/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/make/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/markdown-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/markdown-math/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/mdx/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/objective-c/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/perl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/php/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/powershell/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/pug/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/python/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/r/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/razor/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/restructuredtext/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/ruby/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/rust/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/scss/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/search-result/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/shaderlab/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/shellscript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/sql/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/swift/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/terraform/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/twig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/typescript-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/vb/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/viml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/xml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/textmate/lib/bundles/yaml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/dist/75b6ed1cbcaa8_pycharm-251.26094.114/plugins/vuejs/vue-language-server/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/helpers/package-version-range-matcher/test/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/javascript-plugin/languageService/eslint/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/karma/js_reporter/karma-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/mocha-intellij/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/nodeJS/js/ts-file-loader/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/adoc/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bat/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicep/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/bicepparam/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/clojure/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cmake/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/coffeescript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/cpp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/csharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/css/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/dart/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/diff/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/docker/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/erlang/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/fsharp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/git-base/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/go/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/groovy/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/handlebars/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hcl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/hlsl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/html/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ini/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/java/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/javascript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/json/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/jsp/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/julia/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/kconfig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/latex/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/less/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/log/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/lua/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/make/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/markdown-math/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/mdx/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/objective-c/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/perl/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/php/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/powershell/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/pug/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/python/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/r/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/razor/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/restructuredtext/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/ruby/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/rust/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/scss/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/search-result/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shaderlab/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/shellscript/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/sql/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/swift/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/terraform/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/twig/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/typescript-basics/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/vb/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/viml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/xml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/textmate/lib/bundles/yaml/package.json" />
+      <path value="$PROJECT_DIR$/jetbrains_cache/JetBrains/RemoteDev/userProvidedDist/_mnt_lustre_e1000_home_tc068_tc068_jiangyue_zhu_jetbrains_cache_JetBrains_RemoteDev_dist_6fd526d01abb6_pycharm-251.26927.54/plugins/vuejs/vue-language-server/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectUserFactors">
+    <factor id="completionFinishedType">
+      <dailyData date="27-06-2025">
+        <observation name="cancelled" value="205.0" />
+        <observation name="explicitSelect" value="2.0" />
+        <observation name="typedSelect" value="29.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionType">
+      <dailyData date="27-06-2025">
+        <observation name="BASIC" value="66.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionUsage">
+      <dailyData date="27-06-2025">
+        <observation name="count" value="236.0" />
+      </dailyData>
+    </factor>
+    <factor id="itemPosition">
+      <dailyData date="27-06-2025">
+        <observation name="0" value="1.0" />
+        <observation name="1" value="1.0" />
+      </dailyData>
+    </factor>
+    <factor id="mnemonicsUsage">
+      <dailyData date="27-06-2025">
+        <observation name="total" value="2.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="prefixLength">
+      <dailyData date="27-06-2025">
+        <observation name="4" value="2.0" />
+      </dailyData>
+    </factor>
+    <factor id="prefixMatchingType">
+      <dailyData date="27-06-2025">
+        <observation name="START_WITH" value="2.0" />
+      </dailyData>
+    </factor>
+    <factor id="templatesUsage">
+      <dailyData date="27-06-2025">
+        <observation name="totalStartingWithPrefix" value="2.0" />
+      </dailyData>
+    </factor>
+    <factor id="timeBetweenTyping">
+      <dailyData date="27-06-2025">
+        <observation name="average" value="215.899441" />
+        <observation name="count" value="179.0" />
+      </dailyData>
+    </factor>
+  </component>
+  <component name="RestoreUpdateTree">{}</component>
+</project>
