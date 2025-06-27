@@ -8,7 +8,7 @@ from datasets import load_dataset
 
 
 model_name = "openai/whisper-small"
-output_path = "tedtest_whspr-small_baseline_results.json"
+output_path = "whspr-small_baseline_results.json"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
@@ -42,6 +42,7 @@ for sample in subset:
         waveform = torchaudio.transforms.Resample(orig_freq=sr, new_freq=16000)(
             torch.from_numpy(waveform)).numpy()
         sr = 16000
+
 
     # Generate prediction
     input_features = processor.feature_extractor(
