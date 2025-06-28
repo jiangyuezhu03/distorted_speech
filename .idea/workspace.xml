@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="testing different models">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jiangyue_zhu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jiangyue_zhu.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/ds_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/ds_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" afterDir="false" />
@@ -129,7 +131,7 @@
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33007812" />
-      <window_info id="Commit" order="1" weight="0.28945312" />
+      <window_info id="Commit" order="1" weight="0.33007812" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -139,12 +141,12 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32932013" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.33045214" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.32912233" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32932013" />
-      <window_info anchor="bottom" id="Find" order="8" visible="true" weight="0.32912233" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32912233" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="SciView" />
@@ -194,7 +196,7 @@
       <workItem from="1751036060416" duration="6972000" />
       <workItem from="1751044340992" duration="460000" />
       <workItem from="1751140739755" duration="1162000" />
-      <workItem from="1751141961634" duration="864000" />
+      <workItem from="1751141961634" duration="1343000" />
     </task>
     <task id="LOCAL-00001" summary="rewrote missing shell script">
       <option name="closed" value="true" />

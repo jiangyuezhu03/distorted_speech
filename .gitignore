@@ -1,5 +1,7 @@
 jetbrains_cache/
+jetbrains_cach/
 .cache/
+code/ted3test_cache
 espnet/
 speechbrain/
 *.tar.gz
