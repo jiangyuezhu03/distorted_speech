@@ -8,7 +8,7 @@ from datasets import load_dataset
 
 
 model_name = "openai/whisper-small"
-output_path = "whspr-small_baseline_results.json"
+output_path = "/work/tc068/tc068/jiangyue_zhu/res/whspr-small_baseline_results.json"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')

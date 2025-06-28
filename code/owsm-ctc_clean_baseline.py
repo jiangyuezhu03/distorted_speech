@@ -4,7 +4,7 @@ import torch
 import json
 from jiwer import wer
 from datasets import load_dataset
-output_path = "owsm-ctc_results_clean.json"
+output_path = "/work/tc068/tc068/jiangyue_zhu/res/owsm-ctc_results_clean.json"
 # or espnet/owsm_ctc_v4_1B
 context_len_in_secs = 4  # left and right context when doing buffered inference
 batch_size = 32

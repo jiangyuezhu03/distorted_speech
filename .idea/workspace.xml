@@ -5,21 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="testing different models">
-      <change afterPath="$PROJECT_DIR$/code/ds_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/gen_distortions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/hubert.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/run_distortions.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/run_something.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/run_wavlm.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hvd_481.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/run_owsm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_owsm.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/run_whisper.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_whisper.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/tedtest_owsm-ctc_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/tedtest_whspr-small_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/whspr-small_clean_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/wavlm_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wavlm_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/projects/jiangyue_zhu.83e5594c/cache-state.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/projects/jiangyue_zhu.83e5594c/cache-state.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tedtest_whspr-small_baseline_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/whspr-small_baseline_results.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/ds_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/ds_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/run_something.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_something.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/whspr-small_clean_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/whspr-small_clean_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/LocalHistory/changes.storageData" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/LocalHistory/changes.storageRecordIndex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/conversion/jiangyue_zhu83e5594c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/fileHistory/jiangyue_zhu83e5594c-ngram" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/dirty-file-ids" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/dirty-file-queues/83e5594c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/index-file-filters/jiangyue_zhu.83e5594c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/indices.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/trigram.index/Trigram.Index.2.storage.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/trigram.index/Trigram.Index_inputs.2.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/indexing-diagnostic/storage-diagnostic-2025-06-27-07-05-51.031.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/indexing-diagnostic/storage-diagnostic-2025-06-27-15-54-01.264.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/indexing-diagnostic/storage-diagnostic-on-shutdown-2025-06-27-15-54-01.264.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-51-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-52-01.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-52-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-53-01.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-53-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-54-01.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-54-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-55-01.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-55-28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-55-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-56-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-57-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-58-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-59-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-00-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-01-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-02-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-03-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-04-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-05-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-06-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-07-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-08-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-09-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-10-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-11-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-12-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-13-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-14-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-15-51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-metrics.2025-06-27-15-50-51.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-metrics.2025-06-27-15-54-01.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/sessions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/projects/jiangyue_zhu.83e5594c/cache-state.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/projects/jiangyue_zhu.83e5594c/project-model-cache/cache.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/tmp/intellij-git-askpass-local.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/tmp/intellij-git-editor-local.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/tmp/intellij-ssh-askpass-local.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/vcs-users/83e5594c.2_i" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,26 +100,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.owsm_ctc.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SHELLCHECK.PATH": "/home/tc068/tc068/jiangyue_zhu/.local/share/JetBrains/PyCharm2025.1/Shell Script/shellcheck",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/mnt/lustre/e1000/home/tc068/tc068/jiangyue_zhu/jetbrains_cache",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "two.files.diff.last.used.folder": "/mnt/lustre/e1000/home/tc068/tc068/jiangyue_zhu/jetbrains_cache",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.owsm_ctc.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/home/tc068/tc068/jiangyue_zhu/.local/share/JetBrains/PyCharm2025.1/Shell Script/shellcheck&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/lustre/e1000/home/tc068/tc068/jiangyue_zhu/jetbrains_cache&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;/mnt/lustre/e1000/home/tc068/tc068/jiangyue_zhu/jetbrains_cache&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -86,7 +128,7 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28945312" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33007812" />
       <window_info id="Commit" order="1" weight="0.28945312" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -97,12 +139,12 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32932013" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.5046543" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.33045214" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32932013" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32932013" />
+      <window_info anchor="bottom" id="Find" order="8" visible="true" weight="0.32912233" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="SciView" />
@@ -150,6 +192,9 @@
       <workItem from="1750931736444" duration="32012000" />
       <workItem from="1751004364639" duration="19850000" />
       <workItem from="1751036060416" duration="6972000" />
+      <workItem from="1751044340992" duration="460000" />
+      <workItem from="1751140739755" duration="1162000" />
+      <workItem from="1751141961634" duration="864000" />
     </task>
     <task id="LOCAL-00001" summary="rewrote missing shell script">
       <option name="closed" value="true" />
