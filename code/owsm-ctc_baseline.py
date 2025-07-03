@@ -1,10 +1,18 @@
+import nltk
+nltk.data.path.append("/work/tc068/tc068/jiangyue_zhu/nltk_data")
 from espnet2.bin.s2t_inference_ctc import Speech2TextGreedySearch
 import numpy as np
+from standardize_text import clean_punctuations_transcript, standardize_reference_text
 import torch
+import librosa
 import json
 from jiwer import wer
-from datasets import load_dataset
-output_path = "/work/tc068/tc068/jiangyue_zhu/res/owsm-ctc_results_clean.json"
+from datasets import load_dataset,load_from_disk
+from tqdm import tqdm
+import sys
+
+distortion_type=sys.argv[1] # must match folder names
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/owsm-ctc_{distortion_type}_results.json"
 # or espnet/owsm_ctc_v4_1B
 context_len_in_secs = 4  # left and right context when doing buffered inference
 batch_size = 32
@@ -16,19 +24,19 @@ s2t = Speech2TextGreedySearch.from_pretrained(
     task_sym='<asr>',
 )
 print('installed pipeline')
-
 results = {"segments": [], "overall_wer": 0.0}
 predictions = []
 references = []
 
 print("processing dataset")
-subset = load_dataset("LIUM/tedlium", "release3", split="test",trust_remote_code = True)
-
-for sample in subset:
-    transcript = sample["text"].strip().lower()
+# subset = load_dataset("LIUM/tedlium", "release3", split="test",trust_remote_code = True)
+subset = load_from_disk(f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}")
+for sample in tqdm(subset,desc="processing dataset"):
+    raw_transcript = sample['text']
+    clean_transcript = standardize_reference_text(raw_transcript)
 
     # Skip non-speech markers
-    if "ignore_time_segment_in_scoring" in transcript or "inter_segment_gap" in transcript:
+    if "ignore_time_segment_in_scoring" in clean_transcript:
         continue
 
     audio = sample["audio"]
@@ -42,19 +50,20 @@ for sample in subset:
         sr = 16000
 
 
-    pred_text = s2t.decode_long_batched_buffered(
+    pred_text_raw= s2t.decode_long_batched_buffered(
         waveform,
         batch_size=batch_size,
         context_len_in_secs=context_len_in_secs,
     )
+    pred_text = clean_punctuations_transcript(standardize_reference_text(pred_text_raw))
     predictions.append(pred_text)
-    references.append(transcript)
+    references.append(clean_transcript)
 
     # Optional: compute and log sentence-level WER
-    sentence_wer = wer([pred_text], [transcript])
+    sentence_wer = wer([pred_text], [clean_transcript])
 
     results["segments"].append({
-        "reference": transcript,
+        "reference": clean_transcript,
         "prediction": pred_text,
         "wer": round(sentence_wer, 4)
     })

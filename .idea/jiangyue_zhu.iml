@@ -3,6 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/espnet/.eggs" />
+      <excludeFolder url="file://$MODULE_DIR$/espnet/espnet.egg-info" />
+      <excludeFolder url="file://$MODULE_DIR$/jetbrains_cach" />
       <excludeFolder url="file://$MODULE_DIR$/jetbrains_cache" />
       <excludeFolder url="file://$MODULE_DIR$/speechbrain/speechbrain.egg-info" />
       <excludeFolder url="file://$MODULE_DIR$/test_venv/espnet_new/lib/python3.11/site-packages/Cython" />

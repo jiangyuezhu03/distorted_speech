@@ -5,65 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="testing different models">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/job_laucher.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/standardize_text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/use_flash_attn.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jiangyue_zhu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jiangyue_zhu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/ds_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/ds_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/hubert.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/hubert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/init_env.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/init_env.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/owsm-ctc_clean_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/owsm-ctc_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/run_distortions.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code/run_something.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_something.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/whspr-small_clean_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/whspr-small_clean_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/LocalHistory/changes.storageData" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/LocalHistory/changes.storageRecordIndex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/conversion/jiangyue_zhu83e5594c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/fileHistory/jiangyue_zhu83e5594c-ngram" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/dirty-file-ids" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/dirty-file-queues/83e5594c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/index-file-filters/jiangyue_zhu.83e5594c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/indices.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/trigram.index/Trigram.Index.2.storage.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/index/trigram.index/Trigram.Index_inputs.2.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/indexing-diagnostic/storage-diagnostic-2025-06-27-07-05-51.031.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/indexing-diagnostic/storage-diagnostic-2025-06-27-15-54-01.264.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/indexing-diagnostic/storage-diagnostic-on-shutdown-2025-06-27-15-54-01.264.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-51-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-52-01.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-52-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-53-01.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-53-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-54-01.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-54-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-55-01.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-55-28.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-55-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-56-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-57-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-58-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-17-59-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-00-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-01-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-02-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-03-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-04-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-05-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-06-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-07-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-08-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-09-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-10-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-11-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-12-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-13-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-14-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-meters.2025-06-27-18-15-51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-metrics.2025-06-27-15-50-51.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/open-telemetry-metrics.2025-06-27-15-54-01.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/log/sessions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/projects/jiangyue_zhu.83e5594c/cache-state.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/projects/jiangyue_zhu.83e5594c/project-model-cache/cache.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/tmp/intellij-git-askpass-local.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/tmp/intellij-git-editor-local.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/tmp/intellij-ssh-askpass-local.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jetbrains_cach/JetBrains/PyCharm2025.1/vcs-users/83e5594c.2_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/run_wavlm.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/run_whisper.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/whspr-small_clean_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/whspr-small_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements_distort_env.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements_espnet_new_env.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements_my_test_env.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +65,7 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python.owsm_ctc.executor&quot;: &quot;Run&quot;,
+    &quot;Python.standardize_text.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -130,7 +90,7 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33007812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" />
       <window_info id="Commit" order="1" weight="0.33007812" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -141,11 +101,11 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32932013" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.32912233" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32932013" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.33002645" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32912233" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
@@ -196,7 +156,14 @@
       <workItem from="1751036060416" duration="6972000" />
       <workItem from="1751044340992" duration="460000" />
       <workItem from="1751140739755" duration="1162000" />
-      <workItem from="1751141961634" duration="1343000" />
+      <workItem from="1751141961634" duration="2117000" />
+      <workItem from="1751195139685" duration="7079000" />
+      <workItem from="1751376092150" duration="3201000" />
+      <workItem from="1751400155281" duration="5606000" />
+      <workItem from="1751484272364" duration="2124000" />
+      <workItem from="1751493211110" duration="4879000" />
+      <workItem from="1751524448778" duration="1859000" />
+      <workItem from="1751526353706" duration="17894000" />
     </task>
     <task id="LOCAL-00001" summary="rewrote missing shell script">
       <option name="closed" value="true" />
@@ -263,5 +230,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jiangyue_zhu$owsm_ctc.coverage" NAME="owsm_ctc Coverage Results" MODIFIED="1750935767860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/jiangyue_zhu$standardize_text.coverage" NAME="standardize_text Coverage Results" MODIFIED="1751496578627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
 </project>

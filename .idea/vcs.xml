@@ -3,6 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/espnet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/flash-attention" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/flash-attention/csrc/composable_kernel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/flash-attention/csrc/cutlass" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/speechbrain" vcs="Git" />
   </component>
 </project>
