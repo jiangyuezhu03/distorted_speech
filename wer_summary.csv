@@ -1,0 +1,10 @@
+Distortion,owsm-ctc4,whspr-small
+clean,0.0461,0.0523
+fast,0.9493,1.146
+reversed,0.7597,1.4355
+narrowband,0.9997,0.9887
+tone_vocoded,0.7385,1.7515
+noise_vocoded,0.4283,0.3199
+sinewave,0.428,0.4817
+glimpsed,0.462,0.6832
+sculpted,0.9683,2.0114
