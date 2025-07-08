@@ -2,28 +2,29 @@ import nltk
 nltk.data.path.append("/work/tc068/tc068/jiangyue_zhu/nltk_data")
 from espnet2.bin.s2t_inference_ctc import Speech2TextGreedySearch
 import numpy as np
-from standardize_text import clean_punctuations_transcript, standardize_reference_text
+from standardize_text import clean_punctuations_transcript_owsm, standardize_reference_text
 import torch
 import librosa
 import json
-from jiwer import wer
+# from jiwer import wer
 from datasets import load_dataset,load_from_disk
 from tqdm import tqdm
 import sys
 
 distortion_type=sys.argv[1] # must match folder names
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/owsm-ctc_{distortion_type}_results.json"
-# or espnet/owsm_ctc_v4_1B
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/owsm-ctc4_{distortion_type}_results.json"
+# or espnet/owsm_ctc_v4_1B, espnet/owsm_ctc_v3.1_1B
 context_len_in_secs = 4  # left and right context when doing buffered inference
 batch_size = 32
 s2t = Speech2TextGreedySearch.from_pretrained(
-    "espnet/owsm_ctc_v3.1_1B",
+    "espnet/owsm_ctc_v4_1B",
     device="cuda",
     use_flash_attn=False,   # set to True for better efficiency if flash attn is installed and dtype is float16 or bfloat16
     lang_sym='<eng>',
     task_sym='<asr>',
 )
 print('installed pipeline')
+# import pdb; pdb.set_trace()
 results = {"segments": [], "overall_wer": 0.0}
 predictions = []
 references = []
@@ -55,21 +56,20 @@ for sample in tqdm(subset,desc="processing dataset"):
         batch_size=batch_size,
         context_len_in_secs=context_len_in_secs,
     )
-    pred_text = clean_punctuations_transcript(standardize_reference_text(pred_text_raw))
+    # owsm predictions also output extra space between apostrophe (we 're) just like the transcript
+    pred_text = clean_punctuations_transcript_owsm(standardize_reference_text(pred_text_raw))
     predictions.append(pred_text)
     references.append(clean_transcript)
 
-    # Optional: compute and log sentence-level WER
-    sentence_wer = wer([pred_text], [clean_transcript])
 
     results["segments"].append({
         "reference": clean_transcript,
         "prediction": pred_text,
-        "wer": round(sentence_wer, 4)
+        "wer": None
     })
 
 # Overall WER
-results["overall_wer"] = round(wer(predictions, references), 4)
+results["overall_wer"] = None
 
 # Save to JSON
 with open(output_path, "w", encoding="utf-8") as f:

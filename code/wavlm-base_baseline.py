@@ -2,21 +2,25 @@ import numpy as np
 import torch
 import torchaudio
 import json
+from standardize_text import standardize_reference_text
 from transformers import AutoProcessor, WavLMForCTC
-from jiwer import wer
-from datasets import load_dataset
+from datasets import load_from_disk
+import sys
+from tqdm import tqdm
 
-output_path = "wavlm_base_results_clean.json"
+distortion_type=sys.argv[1] # must match folder names
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/wavlm-base_{distortion_type}_results.json"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"using {device}")
 
-# Load model and processor
-model_name = "microsoft/wavlm-base"  # You can try "wavlm-base-plus" or "wavlm-large" if needed
-processor = AutoProcessor.from_pretrained(model_name)
-model = WavLMForCTC.from_pretrained(model_name).to(device).eval()
+# Load model and processor: processor throws an error
+model_name = "patrickvonplaten/wavlm-libri-clean-100h-base"  # You can try "wavlm-base-plus" or anjulRajendraSharma/WavLm-base-en
+processor = AutoProcessor.from_pretrained(model_name,local_files_only=True,)
+model = WavLMForCTC.from_pretrained(model_name, local_files_only=True, use_safetensors=True).to(device).eval()
+
 import pdb; pdb.set_trace()
 # Load TED-LIUM dataset
-subset = load_dataset("LIUM/tedlium", "release3", split="test", trust_remote_code=True)
+subset = load_from_disk(f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}")
 print("loaded dataset")
 
 results = {"segments": [], "overall_wer": 0.0}
@@ -24,11 +28,12 @@ predictions = []
 references = []
 print("processing dataset")
 
-for sample in subset:
-    transcript = sample["text"].strip().lower()
+for sample in tqdm(subset,desc="processing dataset"):
+    raw_transcript = sample['text']
+    clean_transcript = standardize_reference_text(raw_transcript)
 
     # Skip non-speech markers
-    if "ignore_time_segment_in_scoring" in transcript or "inter_segment_gap" in transcript:
+    if "ignore_time_segment_in_scoring" in clean_transcript:
         continue
 
     audio = sample["audio"]
@@ -52,18 +57,17 @@ for sample in subset:
     pred_text = processor.batch_decode(predicted_ids, skip_special_tokens=True)[0].lower().strip()
 
     predictions.append(pred_text)
-    references.append(transcript)
+    references.append(clean_transcript)
 
-    sentence_wer = wer([pred_text], [transcript])
-
+    sentence_wer = None
     results["segments"].append({
-        "reference": transcript,
+        "reference": clean_transcript,
         "prediction": pred_text,
-        "wer": round(sentence_wer, 4)
+        "wer": None
     })
 
 # Overall WER
-results["overall_wer"] = round(wer(predictions, references), 4)
+results["overall_wer"] = None
 
 # Save to JSON
 with open(output_path, "w", encoding="utf-8") as f:

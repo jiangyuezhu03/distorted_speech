@@ -1,13 +1,20 @@
 # Please run this in your Google Colab Environment
 
-from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
+# from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
+# import torch
+# import torchaudio
+# import re
 import torch
-import torchaudio
-import re
+print(torch.__version__)
+print("checkpoint" in dir(torch.utils))
+import torch.utils.checkpoint
+print("Successfully imported torch.utils.checkpoint")
+
+
+import pdb; pdb.set_trace()
 
 processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
 model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-base-960h")
-import pdb; pdb.set_trace()
 
 audio_file = "hvd_481.wav"
 waveform, sample_rate = torchaudio.load(audio_file)

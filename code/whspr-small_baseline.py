@@ -1,10 +1,10 @@
 import numpy as np
-from standardize_text import standardize_reference_text, clean_punctuations_transcript
+from standardize_text import standardize_reference_text, clean_punctuations_transcript_whspr
 import torch
 import torchaudio
 import json
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
-from jiwer import wer
+# from jiwer import wer
 from datasets import load_dataset,load_from_disk
 from tqdm import tqdm
 import sys
@@ -47,7 +47,6 @@ for sample in tqdm(subset,desc="processing dataset"):
             torch.from_numpy(waveform)).numpy()
         sr = 16000
 
-
     # Generate prediction
     input_features = processor.feature_extractor(
         waveform, sampling_rate=sr, return_tensors="pt").input_features.to(device)
@@ -56,22 +55,20 @@ for sample in tqdm(subset,desc="processing dataset"):
         predicted_ids = model.generate(input_features, forced_decoder_ids=forced_ids)
 
     pred_text_raw = processor.batch_decode(predicted_ids, skip_special_tokens=True)[0]
-    pred_text = clean_punctuations_transcript(pred_text_raw)
+    pred_text = clean_punctuations_transcript_whspr(pred_text_raw)
     # Save both transcript and prediction
     predictions.append(pred_text)
     references.append(clean_transcript)
 
-    # Optional: compute and log sentence-level WER
-    sentence_wer = wer([pred_text], [clean_transcript])
 
     results["segments"].append({
         "reference": clean_transcript,
         "prediction": pred_text,
-        "wer": round(sentence_wer, 4)
+        "wer": None
     })
 
 # Overall WER
-results["overall_wer"] = round(wer(predictions, references), 4)
+results["overall_wer"] = None
 
 # Save to JSON
 with open(output_path, "w", encoding="utf-8") as f:
