@@ -10,15 +10,17 @@ from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 from standardize_text import standardize_reference_text  # your own function
 
 distortion_type = sys.argv[1]  # e.g., clean / fast / reversed / ...
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/wav2vec2-large-xlsr_{distortion_type}_results.json"
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/wav2vec2-large-xlsr-en_{distortion_type}_results.json"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"using {device}")
 
 # Load processor and model
-model_name="facebook/wav2vec2-base-10k-voxpopuli-ft-en"
-model_path = "../.cache/huggingface/hub/models--facebook--wav2vec2-base-10k-voxpopuli-ft-en/snapshots/328f7961ee96d2db3af8bbd22c685f5dd96f9692/"
-processor = Wav2Vec2Processor.from_pretrained(model_name,use_safetensors=True, trust_remote_code=True)
-model = Wav2Vec2ForCTC.from_pretrained(model_name,use_safetensors=True,trust_remote_code=True).to(device).eval()
+# model_name="facebook/wav2vec2-base-10k-voxpopuli-ft-en"
+model_name="jonatasgrosman/wav2vec2-large-xlsr-53-english"
+# model_path = "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--facebook--wav2vec2-base-10k-voxpopuli-ft-en/snapshots/328f7961ee96d2db3af8bbd22c685f5dd96f9692"
+
+processor = Wav2Vec2Processor.from_pretrained(model_name)
+model = Wav2Vec2ForCTC.from_pretrained(model_name, use_safetensors=True).to(device).eval()
 # import pdb; pdb.set_trace()
 # Load dataset
 dataset_path = f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}"
@@ -50,12 +52,12 @@ for sample in tqdm(subset, desc="processing dataset"):
         sr = 16000
 
     # Prepare input
-    inputs = processor(waveform, sampling_rate=sr, return_tensors="pt", padding=True)
+    inputs = processor(waveform, sampling_rate=sr, return_tensors="pt") # without padding=True
     input_values = inputs.input_values.to(device)
 
     # Forward pass
     with torch.no_grad():
-        logits = model(input_values).logits
+        logits = model(input_values,attention_mask=inputs.attention_mask.to(device)).logits
 
     predicted_ids = torch.argmax(logits, dim=-1)
     # currently pred_text is raw prediction

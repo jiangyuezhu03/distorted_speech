@@ -1,0 +1,1205 @@
+{
+  "segments": [
+    {
+      "reference": "tiene una barra de hierro grande y larga",
+      "prediction": "tiene una mala de hierro grande y larga",
+      "wer": 0.125
+    },
+    {
+      "reference": "el hombre se llevó a los chicos en un coche viejo",
+      "prediction": "el hombre se llevó a los chicos en un coche viejo",
+      "wer": 0.0
+    },
+    {
+      "reference": "el final de ese cuento era corto y claro",
+      "prediction": "en final de secuento era corto y claro",
+      "wer": 0.3333
+    },
+    {
+      "reference": "siente el aire tan limpio del campo",
+      "prediction": "siente el aire tan limpio del campo",
+      "wer": 0.0
+    },
+    {
+      "reference": "los nervios se pasan cuando se cierra la puerta",
+      "prediction": "los nervios se pasan cuando se cierra la puerta",
+      "wer": 0.0
+    },
+    {
+      "reference": "deja las botas sucias al lado de la puerta",
+      "prediction": "deja las botas sucias al lado de la puerta",
+      "wer": 0.0
+    },
+    {
+      "reference": "el niño tiene una cara muy dulce",
+      "prediction": "el niño tiene una cara muy dulce",
+      "wer": 0.0
+    },
+    {
+      "reference": "es mejor que te pongas la carga en el otro hombro",
+      "prediction": "es mejor que te pongas la carga en el otro hombro",
+      "wer": 0.0
+    },
+    {
+      "reference": "el suelo forma baches a lo largo de la ruta",
+      "prediction": "el suelo forma baches a lo largo de la ruta",
+      "wer": 0.0
+    },
+    {
+      "reference": "hay cuadros en esta pared de la casa",
+      "prediction": "hay cuadros en esta pared de la casa",
+      "wer": 0.0
+    },
+    {
+      "reference": "mandó higos duros y guardó las fresas",
+      "prediction": "mando y costudos y cuatro fresas",
+      "wer": 0.7143
+    },
+    {
+      "reference": "quita ese dardo del corcho negro",
+      "prediction": "quita ese dado del cocho negro",
+      "wer": 0.3333
+    },
+    {
+      "reference": "las hojas se ponen de color marrón y se caen",
+      "prediction": "las hojas se ponen de colómalo y se caen",
+      "wer": 0.2
+    },
+    {
+      "reference": "este cartel es más fácil de ver",
+      "prediction": "este canal es más fácil de ver",
+      "wer": 0.1429
+    },
+    {
+      "reference": "moja el paño para que quite el fuerte olor",
+      "prediction": "moja el baño para que quite el fuego de olor",
+      "wer": 0.3333
+    },
+    {
+      "reference": "hay que poner trampas para cazar osos",
+      "prediction": "hay que poner lampas para cazar los ojos",
+      "wer": 0.4286
+    },
+    {
+      "reference": "se usa una clave para hablar con una radio vieja",
+      "prediction": "se usa una clave para hablar con una madre vieja",
+      "wer": 0.1
+    },
+    {
+      "reference": "el viejo plato no tiene brillo",
+      "prediction": "el viejo plato no tiene río",
+      "wer": 0.1667
+    },
+    {
+      "reference": "cortan el agua tres veces al día",
+      "prediction": "cortan el agua tres veces al día",
+      "wer": 0.0
+    },
+    {
+      "reference": "la punta de la pluma de bronce es muy fina",
+      "prediction": "la punta de la pluma de blonce es muy fina",
+      "wer": 0.1
+    },
+    {
+      "reference": "qué feliz es el niño cuando juega en el parque",
+      "prediction": "¡qué felices en línea cuando juegan el parque",
+      "wer": 0.7
+    },
+    {
+      "reference": "se usa caña para la pesca del salmón de río",
+      "prediction": "se usará caña para la pesca del salón de río",
+      "wer": 0.2
+    },
+    {
+      "reference": "sólo tiene que izar la vela y zarpar",
+      "prediction": "solo tiene que ir a la vela y saltar",
+      "wer": 0.5
+    },
+    {
+      "reference": "estas chicas venden bolsos falsos",
+      "prediction": "estas chicas venden bolsos falsos",
+      "wer": 0.0
+    },
+    {
+      "reference": "movió la gran piedra detrás de la valla",
+      "prediction": "movió la gran piedra detrás de la valla",
+      "wer": 0.0
+    },
+    {
+      "reference": "tomó su cargo en marzo y lo dejó ayer",
+      "prediction": "tomo su cargo en mazo y lo dejo allá",
+      "wer": 0.4444
+    },
+    {
+      "reference": "se puede mandar todo junto hoy",
+      "prediction": "se puede mandar todo junto hoy",
+      "wer": 0.0
+    },
+    {
+      "reference": "al hombre le gusta la carne bien hecha",
+      "prediction": "al hombre le gusta la carne bien hecha",
+      "wer": 0.0
+    },
+    {
+      "reference": "el brote en el tallo de la planta creció lento",
+      "prediction": "el blote en el tallo de la planta creció lento",
+      "wer": 0.1
+    },
+    {
+      "reference": "cubrió la mesa con una gran tela rosa",
+      "prediction": "cubrió la mesa con una grande la cosa",
+      "wer": 0.375
+    },
+    {
+      "reference": "el hombre vino con una capa negra y larga",
+      "prediction": "el hombre vino con una capa negra y laga",
+      "wer": 0.1111
+    },
+    {
+      "reference": "el plato de arroz y pollo es gratis los lunes",
+      "prediction": "el plan de abrocipo yo es gratis los lunes",
+      "wer": 0.4
+    },
+    {
+      "reference": "vamos a cantar todos juntos una canción",
+      "prediction": "vamos a cantarlos juntos una canción",
+      "wer": 0.2857
+    },
+    {
+      "reference": "el primer jueves es el mejor día del mes",
+      "prediction": "el primer jueves es el mejor día del mes",
+      "wer": 0.0
+    },
+    {
+      "reference": "la obra fue muy floja hasta el final",
+      "prediction": "la obra fue muy floja hasta el final",
+      "wer": 0.0
+    },
+    {
+      "reference": "la bolsa de lana tiene un olor a moho",
+      "prediction": "la gozalana tiene un oloramo",
+      "wer": 0.6667
+    },
+    {
+      "reference": "los peces caen en las grandes redes de los barcos",
+      "prediction": "y los peces caen en las grandes redes de los marcos",
+      "wer": 0.2
+    },
+    {
+      "reference": "el cargo se cobró el día diez del mes",
+      "prediction": "el cargo se cobró el día 10 del mes",
+      "wer": 0.1111
+    },
+    {
+      "reference": "una ruta con tanta cuesta es mala para los pies",
+      "prediction": "una luta con tanta cuesta es mala a los pies",
+      "wer": 0.2
+    },
+    {
+      "reference": "entró aire fresco por el borde de la puerta",
+      "prediction": "entro aire fresco por el borde de la puerta",
+      "wer": 0.1111
+    },
+    {
+      "reference": "los perros de pura raza son caros",
+      "prediction": "los cerros de pula maza son caros",
+      "wer": 0.4286
+    },
+    {
+      "reference": "hizo su primer cuento en este hotel",
+      "prediction": "hizo su primer cuento en este hotel",
+      "wer": 0.0
+    },
+    {
+      "reference": "nadie sabe nada del robo de la perla",
+      "prediction": "nadie sabe nada del robo de la perla",
+      "wer": 0.0
+    },
+    {
+      "reference": "el pomo de la puerta era de un metal muy frágil",
+      "prediction": "el pomo de la puerta de la luz metal muy frágil",
+      "wer": 0.2727
+    },
+    {
+      "reference": "todos los niños van a ir al circo",
+      "prediction": "todos los niños van a ir a fico",
+      "wer": 0.25
+    },
+    {
+      "reference": "el chico joven saltó la verja grande",
+      "prediction": "el chico joven saltó la deja grande",
+      "wer": 0.1429
+    },
+    {
+      "reference": "el pajar era poco firme y todo se cayó",
+      "prediction": "el bajar era poco firme y todo se cayó",
+      "wer": 0.1111
+    },
+    {
+      "reference": "cuelgue las cintas de ambas ramas del árbol",
+      "prediction": "cuelgue las cintas de amarradas del árbol",
+      "wer": 0.25
+    },
+    {
+      "reference": "si tiras de la cuerda, cae todo el grano",
+      "prediction": "si tiras la cuerda cae todo el grano",
+      "wer": 0.2222
+    },
+    {
+      "reference": "la silla de roble no tiene buena base",
+      "prediction": "la silla de roble no tiene base",
+      "wer": 0.125
+    },
+    {
+      "reference": "los restos rotos manchan el suelo de piedra",
+      "prediction": "los restos rotos manchan el suelo de piedra",
+      "wer": 0.0
+    },
+    {
+      "reference": "estas letras muestran que ganó el juego",
+      "prediction": "estas lelas muestran que ganó el juego",
+      "wer": 0.1429
+    },
+    {
+      "reference": "la obra me costó muchas horas de sudor",
+      "prediction": "laura me costó muchas horas de sudo",
+      "wer": 0.375
+    },
+    {
+      "reference": "la chica hizo la mejor marca de la prueba",
+      "prediction": "la chica hizo la mejor marca de la prueba",
+      "wer": 0.0
+    },
+    {
+      "reference": "la chica de piel blanca se tumbó al sol",
+      "prediction": "la chica de quien lo haga se tumbó a sol",
+      "wer": 0.4444
+    },
+    {
+      "reference": "el hombre pudo nadar hasta llegar a la playa",
+      "prediction": "pero no me pudo nadar hasta llegar a la playa",
+      "wer": 0.3333
+    },
+    {
+      "reference": "en el barril hay cuatro tipos de vino",
+      "prediction": "en el marín hay cuatro tipos de vino",
+      "wer": 0.125
+    },
+    {
+      "reference": "la gente tiene frío dentro del cine",
+      "prediction": "la gente tiene ferido dentro del cine",
+      "wer": 0.1429
+    },
+    {
+      "reference": "el lodo era denso a lo largo de la calle",
+      "prediction": "el logo de adenso lo hago en la calle",
+      "wer": 0.6
+    },
+    {
+      "reference": "sabe de lo que la joven y genial actriz es capaz",
+      "prediction": "sabe de lo que la joven ingeniera que dice es capaz",
+      "wer": 0.2727
+    },
+    {
+      "reference": "el perro ladró a los niños de corta edad",
+      "prediction": "espero le hablo a los niños de coberaz",
+      "wer": 0.5556
+    },
+    {
+      "reference": "el joven viene en el nuevo coche de su tío",
+      "prediction": "el joven viene en el nuevo coche de su tío",
+      "wer": 0.0
+    },
+    {
+      "reference": "saltó la valla y entró en el jardín del parque",
+      "prediction": "saltó la valla y entró en jardín del parque",
+      "wer": 0.1
+    },
+    {
+      "reference": "moja el pastel seco en la taza de café",
+      "prediction": "mojala este es el seco en la taza de café",
+      "wer": 0.4444
+    },
+    {
+      "reference": "abra el libro de inglés en la lección dos",
+      "prediction": "abra el libro de inglés en elección 2",
+      "wer": 0.3333
+    },
+    {
+      "reference": "ciertas frutas manchan las manos de verde",
+      "prediction": "ciertas frutas manchan las manos de verde",
+      "wer": 0.0
+    },
+    {
+      "reference": "el hombre lleva una pluma en su gorro de cuero",
+      "prediction": "el hombre lleva una pluma en su gono de cuero",
+      "wer": 0.1
+    },
+    {
+      "reference": "trate de poner otro euro en la hucha",
+      "prediction": "trate de poner otro de trate de poner otro deuda una una mucha",
+      "wer": 1.125
+    },
+    {
+      "reference": "limpió la funda del sofá con agua fría",
+      "prediction": "limpia la funda de sofá con abafía",
+      "wer": 0.5
+    },
+    {
+      "reference": "un kilo de miel cuesta más que los huevos",
+      "prediction": "un kilo de miel cuesta más que los huevos",
+      "wer": 0.0
+    },
+    {
+      "reference": "allí, la marca del agua es de dos metros",
+      "prediction": "allí la maca del agua es de 2 metros",
+      "wer": 0.3333
+    },
+    {
+      "reference": "ponga la carta detrás de las dos hojas",
+      "prediction": "ponga la carta detrás de las dos hojas",
+      "wer": 0.0
+    },
+    {
+      "reference": "la mujer mira al reloj de pared sin parar",
+      "prediction": "la mujer mira el reloj de pared sin parar",
+      "wer": 0.1111
+    },
+    {
+      "reference": "el plazo venció el primer día de mayo",
+      "prediction": "el plazo venció el primer día de mayo",
+      "wer": 0.0
+    },
+    {
+      "reference": "el zumo de uva y el agua se mezclan bien",
+      "prediction": "el zumo de vallel agua se mezcla bien",
+      "wer": 0.4
+    },
+    {
+      "reference": "el chico joven es el autor del libro nuevo",
+      "prediction": "el chico joven es el autor del libro nuevo",
+      "wer": 0.0
+    },
+    {
+      "reference": "el chico se hizo una cresta y la tiñó de rojo",
+      "prediction": "el chico soy fracrista y la tíñora rojo",
+      "wer": 0.5455
+    },
+    {
+      "reference": "los niños cuentan a veces cuentos falsos",
+      "prediction": "los niños cuentan a veces cuentos falsos",
+      "wer": 0.0
+    },
+    {
+      "reference": "el bebé se mete el pie dentro de la boca",
+      "prediction": "el bs mete el bien dentro de la boca",
+      "wer": 0.3
+    },
+    {
+      "reference": "esta frase es la señal para que el actor salga",
+      "prediction": "esta frase es la siguiente para que la acto salga",
+      "wer": 0.3
+    },
+    {
+      "reference": "la chica era buena con toda la gente de la tienda",
+      "prediction": "la chica era buena con toda la gente de la tienda",
+      "wer": 0.0
+    },
+    {
+      "reference": "una risa falsa se oyó en el salón de actos",
+      "prediction": "una visa falsa se oyones a lo de actos",
+      "wer": 0.5
+    },
+    {
+      "reference": "la yegua llegó en primer lugar a la meta",
+      "prediction": "la llevo a llevar primero a la meta",
+      "wer": 0.5556
+    },
+    {
+      "reference": "compró unas botas por cinco euros menos",
+      "prediction": "compre unas botas por 5 de los menos",
+      "wer": 0.5714
+    },
+    {
+      "reference": "la niña habla francés muy bien",
+      "prediction": "la niña habla fases muy bien",
+      "wer": 0.1667
+    },
+    {
+      "reference": "el viejo reloj de la pared marca las once",
+      "prediction": "el viejo reloj de la pared marca la 11",
+      "wer": 0.2222
+    },
+    {
+      "reference": "el hábil ratón salta sobre el gato que duerme",
+      "prediction": "el amigatón salga sobre el gato que duerme",
+      "wer": 0.3333
+    },
+    {
+      "reference": "la luz del porche se fundió ayer noche",
+      "prediction": "la luz de poche se fungió ya poche",
+      "wer": 0.625
+    },
+    {
+      "reference": "el aire frío pasa a través de la capa",
+      "prediction": "el aire frío pasa a través de la capa",
+      "wer": 0.0
+    },
+    {
+      "reference": "lo mejor es coser ambos bordes rectos",
+      "prediction": "lo mejor es coser ambos bordes rectos",
+      "wer": 0.0
+    },
+    {
+      "reference": "el jefe es un hombre seco y poco jovial",
+      "prediction": "el ccc son un mes seco y poco rovial",
+      "wer": 0.4444
+    },
+    {
+      "reference": "el chico sacó la punta al lápiz gris",
+      "prediction": "el chico sacó la punta al lafidis",
+      "wer": 0.25
+    },
+    {
+      "reference": "cogió dos dados para un primer tiro",
+      "prediction": "cogió dos dadas para un primer tío",
+      "wer": 0.2857
+    },
+    {
+      "reference": "frunce el ceño porque está de mal humor",
+      "prediction": "soy un cerceno porque está de mal humor",
+      "wer": 0.375
+    },
+    {
+      "reference": "la labor del sastre se ve en cada prenda",
+      "prediction": "la labor del sastre se venga a prenda",
+      "wer": 0.3333
+    },
+    {
+      "reference": "gran parte del cuento tiene humor",
+      "prediction": "grápate el cuento tiene humor",
+      "wer": 0.5
+    },
+    {
+      "reference": "entré en la tienda pero no vi a nadie",
+      "prediction": "entre las tiendas pero no hay nadie",
+      "wer": 0.6667
+    },
+    {
+      "reference": "el jabón quita mucha más grasa",
+      "prediction": "el jabón quita mucha más grasa",
+      "wer": 0.0
+    },
+    {
+      "reference": "la nueva ropa no tiene cuellos altos",
+      "prediction": "la nueva ropa no tiene cuyos altos",
+      "wer": 0.1429
+    },
+    {
+      "reference": "hay sólo un árbol de ramas largas",
+      "prediction": "hay solo un árbol de vanas largas",
+      "wer": 0.2857
+    },
+    {
+      "reference": "aquel rayo cayó sobre el coche de su padre",
+      "prediction": "a que el rayo cayó sobre el coche de su padre",
+      "wer": 0.3333
+    },
+    {
+      "reference": "secó las gotas de agua con hojas de papel",
+      "prediction": "secó las botas de agua con hojas de papel",
+      "wer": 0.1111
+    },
+    {
+      "reference": "le pidió al ama de llaves un mantel limpio",
+      "prediction": "le pidió a la madriam es un mandelín",
+      "wer": 0.6667
+    },
+    {
+      "reference": "la joven madre hizo una canción para su niño",
+      "prediction": "la joven madre hizo una canción para su niño",
+      "wer": 0.0
+    },
+    {
+      "reference": "para tener fama hay que tener suerte",
+      "prediction": "para tener fama hay que tener suerte",
+      "wer": 0.0
+    },
+    {
+      "reference": "la cera virgen cuida los muebles de roble",
+      "prediction": "la hacer a pigen cuida los muebles de roble",
+      "wer": 0.375
+    },
+    {
+      "reference": "todo el vapor salió por la tapa rota",
+      "prediction": "todo el vapor salió por la tabalota",
+      "wer": 0.25
+    },
+    {
+      "reference": "las hojas del árbol eran frescas y claras",
+      "prediction": "las hojas de lágorinas frescas y claras",
+      "wer": 0.375
+    },
+    {
+      "reference": "los zumos de frutas son muy buenos para los bebés",
+      "prediction": "los tubos de fruta son muy buenos para los bebés",
+      "wer": 0.2
+    },
+    {
+      "reference": "ponga otro tronco grande en el fuego",
+      "prediction": "ponga tu tronco anda el fuego",
+      "wer": 0.4286
+    },
+    {
+      "reference": "coge una carta y ponla detrás de las demás",
+      "prediction": "cogen la carta y ponla detrás de las demás",
+      "wer": 0.2222
+    },
+    {
+      "reference": "busca al ladrón que robó el collar de perlas",
+      "prediction": "busca el ladrón que lo vuelco ya de terras",
+      "wer": 0.5556
+    },
+    {
+      "reference": "un rayo de sol cegó al gato negro",
+      "prediction": "un rayo de sol cegual que aprieto",
+      "wer": 0.5
+    },
+    {
+      "reference": "se oye la misma canción en cada sitio",
+      "prediction": "se oye la misma canción en cada sitio",
+      "wer": 0.0
+    },
+    {
+      "reference": "se le cierran los ojos porque tiene mucho sueño",
+      "prediction": "se le cierra los ojos porque tiene mucho sueño",
+      "wer": 0.1111
+    },
+    {
+      "reference": "trate de trazar finas marcas de color",
+      "prediction": "trate de plazar finas marcas de color",
+      "wer": 0.1429
+    },
+    {
+      "reference": "cae la nieve por todos los pueblos del norte",
+      "prediction": "¡a la nieve por todos los pueblos de norte",
+      "wer": 0.2222
+    },
+    {
+      "reference": "fuma una pipa grande hecha a mano",
+      "prediction": "fumam bienvenidos a chaman",
+      "wer": 0.8571
+    },
+    {
+      "reference": "el martes que viene hay que votar de nuevo",
+      "prediction": "el más es que viene hay que votar de nuevo",
+      "wer": 0.2222
+    },
+    {
+      "reference": "dura el fuerte olor de la vieja sidra",
+      "prediction": "dura el fuerte olor de la vieja sierra",
+      "wer": 0.125
+    },
+    {
+      "reference": "el tubo llena casi toda la zanja",
+      "prediction": "el tuve la cáscita de la zanja",
+      "wer": 0.5714
+    },
+    {
+      "reference": "el hilo unió los dos bordes con fuerza",
+      "prediction": "el hido unió los dos bordes con fuerza",
+      "wer": 0.125
+    },
+    {
+      "reference": "la planta baja era una sala grande",
+      "prediction": "la planta baja y la una sale grande",
+      "wer": 0.4286
+    },
+    {
+      "reference": "todos los cardos se doblan con el fuerte viento",
+      "prediction": "todos los cargos se doran con el fuente viento",
+      "wer": 0.3333
+    },
+    {
+      "reference": "gana siempre para tener más premios",
+      "prediction": "ganas siempre para trenos peños",
+      "wer": 0.6667
+    },
+    {
+      "reference": "el ciervo se pilló una pata en una vieja trampa",
+      "prediction": "el ciervo se dio una pata en una vieja rampa",
+      "wer": 0.2
+    },
+    {
+      "reference": "meta la tela detrás del borde del colchón",
+      "prediction": "¡meta la tela de casi el borde del corchón",
+      "wer": 0.625
+    },
+    {
+      "reference": "muchas algas crecen cerca de las rocas",
+      "prediction": "muchas sagas crecen cerca de las bocas",
+      "wer": 0.2857
+    },
+    {
+      "reference": "un mueble ancho cubrió el hueco en la sala",
+      "prediction": "un buen ancho cubrió el hueco en la sala",
+      "wer": 0.1111
+    },
+    {
+      "reference": "el juego es un poco raro y simple para los niños",
+      "prediction": "el juego es un poco claro y simple para los niños",
+      "wer": 0.0909
+    },
+    {
+      "reference": "el premio final se gana con mucho valor",
+      "prediction": "el premio final se gana con mucho valor",
+      "wer": 0.0
+    },
+    {
+      "reference": "los vientos del norte traen las gripes y fiebres",
+      "prediction": "los viendo de noche tre' las grites y fieres",
+      "wer": 0.6667
+    },
+    {
+      "reference": "la hierba y las hojas se mojan con la débil lluvia",
+      "prediction": "la llave de las hojas se moja con la de mi lluvia",
+      "wer": 0.4545
+    },
+    {
+      "reference": "se quedó dentro de casa sin salir para nada",
+      "prediction": "se quedó dentro de casa sin salir para nada",
+      "wer": 0.0
+    },
+    {
+      "reference": "los niños suelen tener mucho miedo",
+      "prediction": "los niños suelen tener mucho miedo",
+      "wer": 0.0
+    },
+    {
+      "reference": "quita el foco que me hace daño en los ojos",
+      "prediction": "quítalfoco que me hace daño en los ojos",
+      "wer": 0.3
+    },
+    {
+      "reference": "aunque su ropa es cara, es muy fea",
+      "prediction": "aunque su ropa escala es muy fea",
+      "wer": 0.25
+    },
+    {
+      "reference": "el perro guió al hombre ciego en la calle",
+      "prediction": "el pelo guiobano me lleva en la calle",
+      "wer": 0.5556
+    },
+    {
+      "reference": "una grúa es como un ave con patas largas",
+      "prediction": "una broma es como una de compadas largas",
+      "wer": 0.5556
+    },
+    {
+      "reference": "sumó el precio al total de las tres cosas",
+      "prediction": "sumo al precio del total de las tres cosas",
+      "wer": 0.3333
+    },
+    {
+      "reference": "hoy en día el pollo es un plato común",
+      "prediction": "hoy en día voy a sumplar común",
+      "wer": 0.5556
+    },
+    {
+      "reference": "lee el verso en voz alta y con gracia",
+      "prediction": "leel de sombos alta y con gracia",
+      "wer": 0.5556
+    },
+    {
+      "reference": "puso el vaso dentro del horno en marcha",
+      "prediction": "puso el vaso dentro de los lópez marcha",
+      "wer": 0.375
+    },
+    {
+      "reference": "el tren trajo al joven a la gran ciudad",
+      "prediction": "el tren rajoy joven a la cáncila",
+      "wer": 0.4444
+    },
+    {
+      "reference": "la vieja casa de tres pisos es de piedra",
+      "prediction": "la vieja casa de tres pisos de piedra",
+      "wer": 0.1111
+    },
+    {
+      "reference": "cuando llega el tiempo frío se come pavo",
+      "prediction": "cuando llega el tiempo frío se come a ver",
+      "wer": 0.25
+    },
+    {
+      "reference": "hay nueve chicas de pie en fila",
+      "prediction": "hay noves chicas de pielfila",
+      "wer": 0.5714
+    },
+    {
+      "reference": "el olor de las rosas gusta mucho a la gente",
+      "prediction": "en el olor de las rosas gusta mucho la gente",
+      "wer": 0.2
+    },
+    {
+      "reference": "cualquier cosa puede crear ansia",
+      "prediction": "cualquier cosa puede crear así",
+      "wer": 0.2
+    },
+    {
+      "reference": "las nubes se mueven de forma lenta y rara",
+      "prediction": "las nubes se mueven de forma lenta y rara",
+      "wer": 0.0
+    },
+    {
+      "reference": "deje su vaso dentro de la bolsa negra",
+      "prediction": "deja su paso dentro de la bolsa negra",
+      "wer": 0.25
+    },
+    {
+      "reference": "hay una concha de color rosa en la playa",
+      "prediction": "hay una concha de color rosa en la playa",
+      "wer": 0.0
+    },
+    {
+      "reference": "pinta las puertas de rojo y la pared gris",
+      "prediction": "pina las cuertas de lojo y la vale triste",
+      "wer": 0.5556
+    },
+    {
+      "reference": "un rey mandó en la nación veinte años",
+      "prediction": "un rey mandó a la nación 20 años",
+      "wer": 0.25
+    },
+    {
+      "reference": "la mujer tiene mejor vista que tacto",
+      "prediction": "la mujer tiene mejor vista que tacto",
+      "wer": 0.0
+    },
+    {
+      "reference": "una forma de ser rico es no gastar mucho",
+      "prediction": "una forma de ser rico es no gastar mucho",
+      "wer": 0.0
+    },
+    {
+      "reference": "sumar de prisa causó un error en la cuenta",
+      "prediction": "¡sunga de prisa ¡causa un helón en la cuenta",
+      "wer": 0.3333
+    },
+    {
+      "reference": "oyó un coche llegar a la puerta de casa",
+      "prediction": "o yo un coche llegar a la puerta de casa",
+      "wer": 0.2222
+    },
+    {
+      "reference": "los tacos se hunden fácil en el césped blando",
+      "prediction": "los tacos se unen fácilmente seplanos",
+      "wer": 0.6667
+    },
+    {
+      "reference": "un buen libro dice lo que hay que saber",
+      "prediction": "un buen libro díselo que hay que saber",
+      "wer": 0.2222
+    },
+    {
+      "reference": "los hombres van más allá del valle",
+      "prediction": "los hombres van más allá del valle",
+      "wer": 0.0
+    },
+    {
+      "reference": "compró una funda de sofá de color azul",
+      "prediction": "compré una funda de sofá de color azul",
+      "wer": 0.125
+    },
+    {
+      "reference": "se pasó casi toda la tarde en la tienda",
+      "prediction": "se pasó casi toda la tarde en la tienda",
+      "wer": 0.0
+    },
+    {
+      "reference": "haga el favor de coger ese móvil",
+      "prediction": "haga el favor de coger ese móvil",
+      "wer": 0.0
+    },
+    {
+      "reference": "el vino tinto se hace con uva negra",
+      "prediction": "el vinúdico se hace con una negra",
+      "wer": 0.375
+    },
+    {
+      "reference": "el tronco grueso cayó después del corte",
+      "prediction": "el tronco groso cayó después del corte",
+      "wer": 0.1429
+    },
+    {
+      "reference": "ponga la silla vieja en ese rincón",
+      "prediction": "ponga la silla vieja en ese rincón",
+      "wer": 0.0
+    },
+    {
+      "reference": "deja de silbar y mira el juego de los chicos",
+      "prediction": "deja de silbar y mira el juego de los chicos",
+      "wer": 0.0
+    },
+    {
+      "reference": "el té de jazmín tiene un sabor dulce",
+      "prediction": "el té de jacín tiene un sabor dulce",
+      "wer": 0.125
+    },
+    {
+      "reference": "planta un rosal cerca de la puerta del porche",
+      "prediction": "plántamos el sácer en la puerta del porche",
+      "wer": 0.5556
+    },
+    {
+      "reference": "abra la caja pero no rompa el cristal",
+      "prediction": "habla en la caja pero no en la cristal",
+      "wer": 0.5
+    },
+    {
+      "reference": "las frases dulces logran más que las duras",
+      "prediction": "las frases dulces logran más que las duras",
+      "wer": 0.0
+    },
+    {
+      "reference": "el cuadro tiene una raya negra en medio",
+      "prediction": "el cuadro tiene una vallanera en medio",
+      "wer": 0.25
+    },
+    {
+      "reference": "sin duda, el viento sopla hoy del norte",
+      "prediction": "sin duda el viento soblobe norte",
+      "wer": 0.5
+    },
+    {
+      "reference": "la raya donde los bordes se unen está limpia",
+      "prediction": "la raya donde los modes se unen está limpia",
+      "wer": 0.1111
+    },
+    {
+      "reference": "cortó el tronco con un golpe seco y fuerte",
+      "prediction": "cortó el tronco con un vuelve seco y fuerte",
+      "wer": 0.1111
+    },
+    {
+      "reference": "le dio como prueba una vieja foto de su tía",
+      "prediction": "le dio como prueba una vieja foto de su día",
+      "wer": 0.1
+    },
+    {
+      "reference": "un mal paso en el baño es un gran riesgo",
+      "prediction": "un mal paso en el baño es un gran riesgo",
+      "wer": 0.0
+    },
+    {
+      "reference": "el broche de plata tiene diez años",
+      "prediction": "el bloche de plata tiene 10 años",
+      "wer": 0.2857
+    },
+    {
+      "reference": "las luces del coche brillan en el muro de la casa",
+      "prediction": "las luces de coche brillan en el muro de la casa",
+      "wer": 0.0909
+    },
+    {
+      "reference": "es mejor pensar un poco antes de hablar",
+      "prediction": "es mejor pensar un poco antes de hablar",
+      "wer": 0.0
+    },
+    {
+      "reference": "siente el calor de esa débil llama",
+      "prediction": "siente el calor de san ebilama",
+      "wer": 0.4286
+    },
+    {
+      "reference": "el pastor daba pienso a sus cerdos para la cría",
+      "prediction": "el bastón de abatir sus dedos para la cría",
+      "wer": 0.5
+    },
+    {
+      "reference": "coge la sierra por el mango para hacer fuerza",
+      "prediction": "cogelas y va por el mango para hacer fuerza",
+      "wer": 0.3333
+    },
+    {
+      "reference": "el chico le dio cinco euros a un pobre",
+      "prediction": "el chico le dio 5 euros a un pobre",
+      "wer": 0.1111
+    },
+    {
+      "reference": "las moscas zumban con el sol y el calor de junio",
+      "prediction": "las moscas tumban con el sol y el calor de junio",
+      "wer": 0.0909
+    },
+    {
+      "reference": "dale la mano a este niño rubio",
+      "prediction": "dale a la mano a este niño rubio",
+      "wer": 0.1429
+    },
+    {
+      "reference": "el grupo de gente se sumó a la fuerte lucha",
+      "prediction": "el grupo de gente se sumó a la fuerte lucha",
+      "wer": 0.0
+    },
+    {
+      "reference": "vierta el guiso de la olla al plato grande",
+      "prediction": "bien te abrizo y nos vemos el próximo vídeo",
+      "wer": 1.0
+    },
+    {
+      "reference": "salta la valla y vete hacia el banco",
+      "prediction": "salta la valla y ve hacia el banco",
+      "wer": 0.125
+    },
+    {
+      "reference": "la silla del niño cayó del coche en marcha",
+      "prediction": "la silla de niños cayó del coche en masa",
+      "wer": 0.3333
+    },
+    {
+      "reference": "detrás de la tapia baja se ve el lago",
+      "prediction": "detrás de la tapia baja se ve el lago",
+      "wer": 0.0
+    },
+    {
+      "reference": "las nubes altas flotan con la suave brisa",
+      "prediction": "las nubes saltan con la suave risa",
+      "wer": 0.375
+    },
+    {
+      "reference": "el té de la jarra marrón está rico",
+      "prediction": "el t de la jala de amarón está rico",
+      "wer": 0.5
+    },
+    {
+      "reference": "una grieta en la pared puede causar un fuego",
+      "prediction": "una grita en la pared puede causar un fuego",
+      "wer": 0.1111
+    },
+    {
+      "reference": "hay cinco huevos en el nido del árbol",
+      "prediction": "hay cinco huevos en el milagro",
+      "wer": 0.375
+    },
+    {
+      "reference": "las fundas de piel están muy de moda",
+      "prediction": "las hundas de piel están muy demogadas",
+      "wer": 0.375
+    },
+    {
+      "reference": "un jarrón de oro es a la vez raro y caro",
+      "prediction": "un jarón de oro es a la vez de mano y caro",
+      "wer": 0.2727
+    },
+    {
+      "reference": "los peces cogen la lombriz muy pronto",
+      "prediction": "los peces cogen a la homilid muy pronto",
+      "wer": 0.2857
+    },
+    {
+      "reference": "el musgo verde crece en el lado norte",
+      "prediction": "el musgovall crece en el lado norte",
+      "wer": 0.25
+    },
+    {
+      "reference": "pon bien el nuevo foco en el techo",
+      "prediction": "¡vamos",
+      "wer": 1.0
+    },
+    {
+      "reference": "al hacer la compra, no te dejes la sal",
+      "prediction": "a la cera compra no te dejes la sal",
+      "wer": 0.4444
+    },
+    {
+      "reference": "un lápiz con mina blanda es mucho mejor",
+      "prediction": "un lápiz con una banda es mucho mejor",
+      "wer": 0.25
+    },
+    {
+      "reference": "en esa finca se sembró maíz y trigo",
+      "prediction": "en esa finca se sembró maíz y trigo",
+      "wer": 0.0
+    },
+    {
+      "reference": "el camión tuvo que parar por la fuerte lluvia",
+      "prediction": "el camión tuvo que parar por la fuente lluvia",
+      "wer": 0.1111
+    },
+    {
+      "reference": "echa sal antes de freír el huevo",
+      "prediction": "¡echa salante de friro huevo",
+      "wer": 0.7143
+    },
+    {
+      "reference": "el color de la pared de la sala era triste",
+      "prediction": "el color de la pared de la sala era triste",
+      "wer": 0.0
+    },
+    {
+      "reference": "las hojas del pino no se caen en todo el año",
+      "prediction": "las hojas del pino no se caen en todo el año",
+      "wer": 0.0
+    },
+    {
+      "reference": "el carro iba bien sobre tres ruedas",
+      "prediction": "el cargo de mi sobretrejadas",
+      "wer": 0.8571
+    },
+    {
+      "reference": "el hielo causó algún desliz que otro",
+      "prediction": "el dino causó lo de slytherin",
+      "wer": 0.7143
+    },
+    {
+      "reference": "el pino y el haya son lo mejor para hacer muebles",
+      "prediction": "el pino y la llave son lo mejor para celulares",
+      "wer": 0.3636
+    },
+    {
+      "reference": "se tumbó al sol en la hierba del parque grande",
+      "prediction": "según valso de la yerba del pac man",
+      "wer": 0.8
+    },
+    {
+      "reference": "en el barco hay mapas en la caja fuerte",
+      "prediction": "en el balco hay mapas en la caja fuerte",
+      "wer": 0.1111
+    },
+    {
+      "reference": "la cuerda unió los siete libros en uno",
+      "prediction": "la cuerda unió los 710 segundos",
+      "wer": 0.5
+    },
+    {
+      "reference": "dale un trozo de pan al ratón para comer",
+      "prediction": "¡dale un trozo de panas para comprar",
+      "wer": 0.5556
+    },
+    {
+      "reference": "el cielo en el este se tiñe de rojo y negro",
+      "prediction": "el cielo en el este esenio de lojo y negro",
+      "wer": 0.2727
+    },
+    {
+      "reference": "una pizca de sal da sabor al guiso",
+      "prediction": "una pica de sal da sabor a quiso",
+      "wer": 0.375
+    },
+    {
+      "reference": "la rueda giró muy lenta en la nieve",
+      "prediction": "la rodajera es muy lenta en la nieve",
+      "wer": 0.25
+    },
+    {
+      "reference": "la casa está llena de barro y polvo",
+      "prediction": "la casa está llena de barro y polvo",
+      "wer": 0.0
+    },
+    {
+      "reference": "las horas gratas pasan muy pronto",
+      "prediction": "las gatas pasan muy pronto",
+      "wer": 0.3333
+    },
+    {
+      "reference": "corta la cuerda que ata los fardos de paja",
+      "prediction": "corta la cuerda y ya los van a los de baja",
+      "wer": 0.6667
+    },
+    {
+      "reference": "la carne fría es apta para este menú",
+      "prediction": "la camioneta es apta para este menú",
+      "wer": 0.25
+    },
+    {
+      "reference": "la sala blanca está llena de gente",
+      "prediction": "la sala blanca está llena de gente",
+      "wer": 0.0
+    },
+    {
+      "reference": "la duna se movió hasta el mismo borde del agua",
+      "prediction": "la duración movió hasta el mismo borde del agua",
+      "wer": 0.2
+    },
+    {
+      "reference": "limpió el pozo con un trapo y un palo largo",
+      "prediction": "limpió el pozo con un trapo y un balo largo",
+      "wer": 0.1
+    },
+    {
+      "reference": "vivió cinco años con aquel perro",
+      "prediction": "vivió 5 años con aquel pelo",
+      "wer": 0.3333
+    },
+    {
+      "reference": "el arroz se suele servir en platos hondos",
+      "prediction": "el agro se suele ser bien plato",
+      "wer": 0.625
+    },
+    {
+      "reference": "cortan toda la carne en tiras finas",
+      "prediction": "cortando a la carne en tira finas",
+      "wer": 0.4286
+    },
+    {
+      "reference": "debes servir un ron viejo a los hombres",
+      "prediction": "debe servir un ron viejo a los hombres",
+      "wer": 0.125
+    },
+    {
+      "reference": "el jersey nuevo cuelga de la percha marrón",
+      "prediction": "el ejercicio nuevo cuida de la pecha marón",
+      "wer": 0.5
+    },
+    {
+      "reference": "hay que tener mucho calor para sudar",
+      "prediction": "¡hay que tener mucho calor para su hogar",
+      "wer": 0.4286
+    },
+    {
+      "reference": "el tiempo cambia mucho este mes",
+      "prediction": "el tiempo cambia mucho este mes",
+      "wer": 0.0
+    },
+    {
+      "reference": "no hay duda de por dónde sopla el viento",
+      "prediction": "no hay duda de por dónde soplar viento",
+      "wer": 0.2222
+    },
+    {
+      "reference": "iza la vela y lleva el barco al norte",
+      "prediction": "y esa la vela lleva al barco al norte",
+      "wer": 0.4444
+    },
+    {
+      "reference": "hay un tronco que flota en el río ancho",
+      "prediction": "hay un tronco que flota en el río ancho",
+      "wer": 0.0
+    },
+    {
+      "reference": "si piensas al hablar dirás las cosas claras",
+      "prediction": "si piensas hablar dirás las cosas claras",
+      "wer": 0.125
+    },
+    {
+      "reference": "una berza siempre crece mejor en la huerta",
+      "prediction": "una mesa siempre que se mejora la vuelta",
+      "wer": 0.625
+    },
+    {
+      "reference": "el pelo largo se pone liso con la lluvia",
+      "prediction": "el pelo largo se pone listo la lluvia",
+      "wer": 0.2222
+    },
+    {
+      "reference": "la deuda se pagó en el cuarto mes del año",
+      "prediction": "la deuda se pagó en el 4 mes de año",
+      "wer": 0.2
+    },
+    {
+      "reference": "a los fans del actor les gusta el cine negro",
+      "prediction": "a los fans del actor les gusta el cine negro",
+      "wer": 0.0
+    }
+  ],
+  "overall_wer": 0.2616
+}

@@ -14,7 +14,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"using {device}")
 
 # Load model and processor: processor throws an error
-model_name = "patrickvonplaten/wavlm-libri-clean-100h-base"  # You can try "wavlm-base-plus" or anjulRajendraSharma/WavLm-base-en
+model_name = "patrickvonplaten/wavlm-libri-clean-100h-base"
+# You can try "wavlm-base-plus" or anjulRajendraSharma/WavLm-base-en
+model_path = "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/"
 processor = AutoProcessor.from_pretrained(model_name,local_files_only=True, use_safetensors=True)
 model = WavLMForCTC.from_pretrained(model_name, local_files_only=True, use_safetensors=True).to(device).eval()
 

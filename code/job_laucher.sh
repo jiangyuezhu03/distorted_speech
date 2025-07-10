@@ -19,13 +19,14 @@ WHISPER_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/whspr-small_baseline.py"
 OWSMCTC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm-ctc_baseline.py"
 OWSM4_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm4_baseline.py"
 WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm-base_baseline.py"
+WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec2-base-voxpopuli.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-SCRIPTS=($WAVLM_SCRIPT)
+SCRIPTS=($WAV2VEC_SCRIPT)
 
 for SCRIPT in "${SCRIPTS[@]}"; do
-    if [[ "$SCRIPT" == "$WHISPER_SCRIPT" ||  "$SCRIPT" == "$WAVLM_SCRIPT" ]]; then
+    if [[ "$SCRIPT" == "$WHISPER_SCRIPT" ||  "$SCRIPT" == "$WAVLM_SCRIPT" || "$SCRIPT" == "$WAV2VEC_SCRIPT" ]]; then
         ENV="my_test_env"
     elif [[ "$SCRIPT" == "$OWSMCTC_SCRIPT" || "$SCRIPT" == "$OWSM4_SCRIPT" ]]; then
         ENV="espnet_new"
