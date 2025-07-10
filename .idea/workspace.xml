@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="">
+    <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="added wavlm partial results">
+      <change afterPath="$PROJECT_DIR$/code/wav2vec2-base-voxpopuli.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/ds_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/ds_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/init_env.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/init_env.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/job_laucher.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/job_laucher.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/owsm-ctc_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/owsm-ctc_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/owsm4_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/owsm4_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/hubert.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/hubert.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/run_something.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_something.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/standardize_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/standardize_text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/wav2vec_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wav2vec_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/wavlm-base_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wavlm-base_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/wavlm_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wavlm_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/whspr-small_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/whspr-small_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/wavlm-base_fast_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/wavlm-base_fast_results.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -69,19 +63,19 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32981223" />
-      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.44101563" />
+      <window_info id="Commit" order="1" weight="0.32981223" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="HfCacheToolWindow" />
       <window_info anchor="bottom" id="Find" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.33045214" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.32932013" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.36838624" />
-      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.33045214" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.20545213" />
+      <window_info anchor="bottom" id="Services" order="4" weight="0.33045214" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.2811615" />
@@ -131,11 +125,40 @@
       <workItem from="1750409013008" duration="15413000" />
       <workItem from="1751900721106" duration="20661000" />
       <workItem from="1751959159143" duration="10268000" />
+      <workItem from="1751986100359" duration="112000" />
+      <workItem from="1752013658214" duration="1859000" />
+      <workItem from="1752050353681" duration="12882000" />
+      <workItem from="1752088637104" duration="6721000" />
+      <workItem from="1752137982243" duration="7146000" />
     </task>
+    <task id="LOCAL-00001" summary="added wavlm partial results">
+      <option name="closed" value="true" />
+      <created>1751986186770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751986186770</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added wavlm partial results" />
+    <option name="LAST_COMMIT_MESSAGE" value="added wavlm partial results" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jiangyue_zhu$my_test.coverage" NAME="my_test Coverage Results" MODIFIED="1749934081256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

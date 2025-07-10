@@ -9,8 +9,9 @@ echo "activated $ENV_NAME"
 # Redirect Hugging Face and JetBrains cache to work disk
 export HF_HOME="/work/tc068/tc068/jiangyue_zhu/.cache/huggingface"
 export XDG_CACHE_HOME="/work/tc068/tc068/jiangyue_zhu/jetbrains_cache"
-export HF_HUB_OFFLINE=1
+#export HF_HUB_OFFLINE=1
 # Run the specified Python script
+echo "running $SCRIPT_NAME"
 python $SCRIPT_NAME "$@"
 
 deactivate

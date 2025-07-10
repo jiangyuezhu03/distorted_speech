@@ -1,42 +1,12 @@
-# Please run this in your Google Colab Environment
+from transformers import AutoProcessor, Wav2Vec2ForCTC, WavLMForCTC
 
-# from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
-# import torch
-# import torchaudio
-# import re
-import torch
-print(torch.__version__)
-print("checkpoint" in dir(torch.utils))
-import torch.utils.checkpoint
-print("Successfully imported torch.utils.checkpoint")
+model_name = "facebook/wav2vec2-base-10k-voxpopuli-ft-en"  # or the WavLM one
 
-
-import pdb; pdb.set_trace()
-
-processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
-model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-base-960h")
-
-audio_file = "hvd_481.wav"
-waveform, sample_rate = torchaudio.load(audio_file)
-
-resampler = torchaudio.transforms.Resample(orig_freq=sample_rate, new_freq=16000)
-waveform = resampler(waveform)
-
-inputs = processor(waveform.squeeze(), sampling_rate=16000, return_tensors="pt", padding=True)
-
-with torch.no_grad():
-  logits = model(inputs.input_values).logits
-
-predicted_ids = torch.argmax(logits, dim=-1)
-transcription = processor.decode(predicted_ids[0])
-
-print("transcript:", transcription)
-
-
-# def clean_transcription(text):
-#   filler_words = ["A", "YOU KNOW", "AM", "BASICALLY", "LIKE", "SO YA"]
-#   pattern = r"\b(" + "|".join(filler_words) + r")\b"
-#   return re.sub(pattern, "", text)
-#
-# refined_transcription = clean_transcription(transcription)
-# print(refined_transcription)
+try:
+    model_path = "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--facebook--wav2vec2-base-10k-voxpopuli-ft-en/snapshots/328f7961ee96d2db3af8bbd22c685f5dd96f9692"
+    processor = AutoProcessor.from_pretrained(model_path, local_files_only=True)
+    model = Wav2Vec2ForCTC.from_pretrained(model_path, local_files_only=True)
+    print("success")
+except Exception as e:
+    import traceback
+    traceback.print_exc()
