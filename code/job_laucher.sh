@@ -19,10 +19,11 @@ WHISPER_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/whspr-small_baseline.py"
 OWSMCTC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm-ctc_baseline.py"
 OWSM4_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm4_baseline.py"
 WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm-base_baseline.py"
-WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec2-base-voxpopuli.py"
+WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec2_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
+#DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
+DISTORTIONS=("sinewave" "glimpsed" "sculpted")
 SCRIPTS=($WAV2VEC_SCRIPT)
 
 for SCRIPT in "${SCRIPTS[@]}"; do
@@ -44,13 +45,4 @@ for SCRIPT in "${SCRIPTS[@]}"; do
     deactivate
 done
 # example use: sbatch job_launcher.sh
-## make up the missed owsm tests
-##
-#source /work/tc068/tc068/jiangyue_zhu/test_venv/espnet_new/bin/activate
-#
-#for DIST in "${DISTORTIONS[@]}"; do
-#    echo "Running $SCRIPT in espnet_new on distortion: $DIST"
-#    srun python owsm-ctc_baseline.py $DIST
-#done
-#
-#deactivate
+

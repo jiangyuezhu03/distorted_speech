@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="updated filenames to match models, wavlm and wav2vec2 still has connection error on compute node, need to try locally">
+    <list default="true" id="9eacb03a-21b6-4f30-8c0f-c9d1bfb06f5b" name="Changes" comment="updated wav2vec2 multilingual results without LM">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/job_laucher.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/job_laucher.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/run_something.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_something.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/wav2vec2-base-voxpopuli.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wav2vec2_baseline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/wavlm-base_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wavlm-base_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/wav2vec2_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wav2vec2_baseline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -45,13 +48,18 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHELLCHECK.PATH&quot;: &quot;/home/tc068/tc068/jiangyue_zhu/.local/share/JetBrains/PyCharm2025.1/Shell Script/shellcheck&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/lustre/e1000/home/tc068/tc068/jiangyue_zhu&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/lustre/e1000/home/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;repository&quot;
+    ]
   }
 }</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
@@ -62,8 +70,8 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33398438" />
-      <window_info id="Commit" order="1" weight="0.33398438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3303078" />
+      <window_info id="Commit" order="1" weight="0.33007812" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -73,7 +81,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.33045214" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.33045214" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.11744966" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.33045214" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
@@ -93,9 +101,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e" />
+      <recent name="$PROJECT_DIR$/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/language_model" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e" />
+      <recent name="$PROJECT_DIR$/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -132,7 +144,12 @@
       <workItem from="1752145870029" duration="2486000" />
       <workItem from="1752156753160" duration="5347000" />
       <workItem from="1752172738308" duration="5942000" />
-      <workItem from="1752186013384" duration="61000" />
+      <workItem from="1752186013384" duration="242000" />
+      <workItem from="1752223722058" duration="2672000" />
+      <workItem from="1752226498160" duration="6225000" />
+      <workItem from="1752266274635" duration="3232000" />
+      <workItem from="1752304926346" duration="264000" />
+      <workItem from="1752326124911" duration="1926000" />
     </task>
     <task id="LOCAL-00001" summary="added wavlm partial results">
       <option name="closed" value="true" />
@@ -150,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752145559374</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated wav2vec2 multilingual results without LM">
+      <option name="closed" value="true" />
+      <created>1752186236551</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752186236552</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added wavlm partial results" />
     <MESSAGE value="updated filenames to match models, wavlm and wav2vec2 still has connection error on compute node, need to try locally" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated filenames to match models, wavlm and wav2vec2 still has connection error on compute node, need to try locally" />
+    <MESSAGE value="updated wav2vec2 multilingual results without LM" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated wav2vec2 multilingual results without LM" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jiangyue_zhu$my_test.coverage" NAME="my_test Coverage Results" MODIFIED="1749934081256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

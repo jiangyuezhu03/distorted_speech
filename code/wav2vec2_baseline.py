@@ -6,22 +6,25 @@ from datasets import load_from_disk
 from tqdm import tqdm
 import sys
 
-from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
+from transformers import Wav2Vec2ForCTC, Wav2Vec2ProcessorWithLM
 from standardize_text import standardize_reference_text  # your own function
 
 distortion_type = sys.argv[1]  # e.g., clean / fast / reversed / ...
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/wav2vec2-large-xlsr-en_{distortion_type}_results.json"
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/wav2vec2-base-lm_{distortion_type}_results.json"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"using {device}")
 
 # Load processor and model
 # model_name="facebook/wav2vec2-base-10k-voxpopuli-ft-en"
-model_name="jonatasgrosman/wav2vec2-large-xlsr-53-english"
+# model_name="jonatasgrosman/wav2vec2-large-xlsr-53-english"
+model_name="patrickvonplaten/wav2vec2-base-100h-with-lm"
 # model_path = "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--facebook--wav2vec2-base-10k-voxpopuli-ft-en/snapshots/328f7961ee96d2db3af8bbd22c685f5dd96f9692"
+model_path="/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e"
 
-processor = Wav2Vec2Processor.from_pretrained(model_name)
-model = Wav2Vec2ForCTC.from_pretrained(model_name, use_safetensors=True).to(device).eval()
-# import pdb; pdb.set_trace()
+processor = Wav2Vec2ProcessorWithLM.from_pretrained(model_path)
+print('loaded processor')
+model = Wav2Vec2ForCTC.from_pretrained(model_path, use_safetensors=True).to(device).eval()
+
 # Load dataset
 dataset_path = f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}"
 subset = load_from_disk(dataset_path)
@@ -57,12 +60,21 @@ for sample in tqdm(subset, desc="processing dataset"):
 
     # Forward pass
     with torch.no_grad():
-        logits = model(input_values,attention_mask=inputs.attention_mask.to(device)).logits
+        # logits = model(input_values,attention_mask=inputs.attention_mask.to(device)).logits
+        logits = model(input_values).logits
 
-    predicted_ids = torch.argmax(logits, dim=-1)
+    # predicted_ids = torch.argmax(logits, dim=-1)
     # currently pred_text is raw prediction
-    pred_text = processor.batch_decode(predicted_ids, skip_special_tokens=True)[0].lower().strip()
-
+    # pred_text = processor.batch_decode(predicted_ids, skip_special_tokens=True)[0].lower().strip()
+    # with lm
+    try:
+        raw_pred_text = processor.batch_decode(logits.cpu().numpy()).text[0]
+    except ValueError:
+        print(f"LM decoding failed. Falling back to argmax decoding.")
+        predicted_ids = torch.argmax(logits, dim=-1)
+        raw_pred_text = processor.tokenizer.batch_decode(predicted_ids, skip_special_tokens=True)[0]
+    # raw_pred_text = processor.batch_decode(logits.cpu().numpy()).text[0]
+    pred_text = raw_pred_text.lower().strip()
     predictions.append(pred_text)
     references.append(clean_transcript)
 
