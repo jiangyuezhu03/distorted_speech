@@ -5,13 +5,14 @@ import numpy as np
 from espnet2.bin.s2t_inference import Speech2Text
 from datasets import load_from_disk
 from standardize_text import clean_punctuations_transcript_owsm, standardize_reference_text
+from my_batch_eval import map_batch_to_preds,map_audio_and_text
 import torch
 import torch.utils.checkpoint
 import librosa
 import json
 from tqdm import tqdm
 import sys
-
+# not calculating cer yet, needs text standardization
 distortion_type=sys.argv[1] # must match folder names
 output_path = f"/work/tc068/tc068/jiangyue_zhu/res/owsm4_{distortion_type}_results.json"
 # or espnet/owsm_ctc_v4_1B, espnet/owsm_ctc_v3.1_1B

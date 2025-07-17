@@ -19,13 +19,13 @@ WHISPER_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/whspr-small_baseline.py"
 OWSMCTC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm-ctc_baseline.py"
 OWSM4_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm4_baseline.py"
 WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm-base_baseline.py"
-WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec2_baseline.py"
+WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-DISTORTIONS=("sinewave" "glimpsed" "sculpted")
 SCRIPTS=($WAV2VEC_SCRIPT)
 
+# iterate multiple models
 for SCRIPT in "${SCRIPTS[@]}"; do
     if [[ "$SCRIPT" == "$WHISPER_SCRIPT" ||  "$SCRIPT" == "$WAVLM_SCRIPT" || "$SCRIPT" == "$WAV2VEC_SCRIPT" ]]; then
         ENV="my_test_env"
@@ -37,12 +37,19 @@ for SCRIPT in "${SCRIPTS[@]}"; do
 
     source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
 
-    for DIST in "${DISTORTIONS[@]}"; do
-        echo "Running $SCRIPT in $ENV on distortion: $DIST"
-        srun python $SCRIPT $DIST
-    done
+#    for DIST in "${DISTORTIONS[@]}"; do
+#        echo "Running $SCRIPT in $ENV on distortion: $DIST"
+#        srun python $SCRIPT $DIST
+#    done
+#  CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_1_3" "mid_only_2_3" "mid_only_1.0")
+  CONFIGS=("high_mid_1_3" "low_high_1_3" "mid_only_1_3" "mid_only_2_3" "mid_only_1.0")
 
-    deactivate
+  DISTORTION_TYPE="narrowband"  # or any you want to fix or pass
+  for CONDITION in ${CONFIGS[@]};do
+    echo "Running condition: $CONDITION"
+    python wav2vec_batch_baseline.py $DISTORTION_TYPE $CONDITION
+  done
+  deactivate
 done
 # example use: sbatch job_launcher.sh
 
