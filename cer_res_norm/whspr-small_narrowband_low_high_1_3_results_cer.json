@@ -6932,5 +6932,6 @@
     }
   ],
   "overall_wer": null,
-  "overall_cer": 0.9799
+  "overall_cer": 0.9799,
+  "avg_cer": 0.9707988744588745
 }
