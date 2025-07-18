@@ -23,7 +23,7 @@ WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-SCRIPTS=($WAV2VEC_SCRIPT)
+SCRIPTS=($OWSMCTC_SCRIPT)
 
 # iterate multiple models
 for SCRIPT in "${SCRIPTS[@]}"; do
@@ -31,23 +31,24 @@ for SCRIPT in "${SCRIPTS[@]}"; do
         ENV="my_test_env"
     elif [[ "$SCRIPT" == "$OWSMCTC_SCRIPT" || "$SCRIPT" == "$OWSM4_SCRIPT" ]]; then
         ENV="espnet_new"
+        export PYTHONPATH=/work/tc068/tc068/jiangyue_zhu/espnet:$PYTHONPATH
     else
       echo "unknown model"
     fi
 
     source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
-
+    echo "activated $ENV"
 #    for DIST in "${DISTORTIONS[@]}"; do
 #        echo "Running $SCRIPT in $ENV on distortion: $DIST"
 #        srun python $SCRIPT $DIST
 #    done
 #  CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_1_3" "mid_only_2_3" "mid_only_1.0")
-  CONFIGS=("high_mid_1_3" "low_high_1_3" "mid_only_1_3" "mid_only_2_3" "mid_only_1.0")
+  CONFIGS=("0.5" "1.5" "2.5")
 
-  DISTORTION_TYPE="narrowband"  # or any you want to fix or pass
+  DISTORTION_TYPE="fast"  # or any you want to fix or pass
   for CONDITION in ${CONFIGS[@]};do
     echo "Running condition: $CONDITION"
-    python wav2vec_batch_baseline.py $DISTORTION_TYPE $CONDITION
+    python $SCRIPT $DISTORTION_TYPE $CONDITION
   done
   deactivate
 done

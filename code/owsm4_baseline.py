@@ -1,11 +1,13 @@
 #espnet/owsm_v4_base_102M
+# just fixed huggingface connection on loop script, replaced it with batch script, simply save and run
+#
 import nltk
 nltk.data.path.append("/work/tc068/tc068/jiangyue_zhu/nltk_data")
 import numpy as np
 from espnet2.bin.s2t_inference import Speech2Text
 from datasets import load_from_disk
 from standardize_text import clean_punctuations_transcript_owsm, standardize_reference_text
-from my_batch_eval import map_batch_to_preds,map_audio_and_text
+from my_batch_eval import map_batch_to_preds_owsm,map_audio_and_text
 import torch
 import torch.utils.checkpoint
 import librosa
@@ -14,7 +16,10 @@ from tqdm import tqdm
 import sys
 # not calculating cer yet, needs text standardization
 distortion_type=sys.argv[1] # must match folder names
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/owsm4_{distortion_type}_results.json"
+condition = sys.argv[2]
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/owsm4_{distortion_type}_{condition}_results.json"
+
+# output_path = f"/work/tc068/tc068/jiangyue_zhu/res/owsm4_{distortion_type}_results.json"
 # or espnet/owsm_ctc_v4_1B, espnet/owsm_ctc_v3.1_1B
 
 # Configuration
@@ -31,58 +36,38 @@ s2t = Speech2Text.from_pretrained(
 )
 
 print("Installed OWSM encoder-decoder pipeline")
-results = {"segments": [], "overall_wer": None}
-predictions = []
-references = []
+
 
 print("Processing dataset")
-subset = load_from_disk(f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}")
+subset = load_from_disk(f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}")
+subset = subset.map(map_audio_and_text)
+print("mapping")
 
-for sample in tqdm(subset, desc="processing dataset"):
-    raw_transcript = sample["text"]
-    clean_transcript = standardize_reference_text(raw_transcript)
+def predict_batch(batch):
+    return map_batch_to_preds_owsm(batch,s2t)
 
-    if "ignore_time_segment_in_scoring" in clean_transcript:
-        continue
+result = subset.map(
+        predict_batch,
+        batched=True,
+        batch_size=16,
+        remove_columns=["audio", "text", "waveform", "sampling_rate"]
+    )
+print("generating results")
 
-    audio = sample["audio"]
-    waveform = np.array(audio["array"],dtype=np.float32)
-    sr = audio["sampling_rate"]
+results = {
+    "segments": [],
+    "overall_cer": None
+}
 
-    if sr != 16000:
-        waveform = librosa.resample(waveform, orig_sr=sr, target_sr=16000)
-        sr = 16000
-
-    # Decode with encoder-decoder model, set lang sys parameters, check line 55 of fast
-    try:
-        output = s2t(
-            waveform,
-            lang_sym="<eng>",
-            task_sym="<asr>",
-            text_prev="worcestershire sauce" # added after submitting job
-        )
-
-        pred_text_raw = output[0][-2]  # Final text hypothesis (without timestamp info)
-    except Exception as e:
-        print(f"Decoding error: {e}")
-        pred_text_raw = ""
-
-    pred_text = clean_punctuations_transcript_owsm(standardize_reference_text(pred_text_raw))
-    predictions.append(pred_text)
-    references.append(clean_transcript)
-
+for ref, hyp in zip(result["transcript"], result["predicted"]):
     results["segments"].append({
-        "reference": clean_transcript,
-        "prediction": pred_text,
-        "wer": None
+        "reference": ref,
+        "prediction": hyp,
+        "cer": None
     })
-
-# results["overall_wer"] can be filled in later, e.g., with jiwer or evaluate
-results["overall_wer"] = None
-
-
 # Save to JSON
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(results, f, indent=2, ensure_ascii=False)
 
 print(f"Saved results to {output_path}")
+

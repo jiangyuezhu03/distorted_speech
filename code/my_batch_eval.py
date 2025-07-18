@@ -1,5 +1,7 @@
-from standardize_text import standardize_reference_text
+from standardize_text import (standardize_reference_text,
+                              clean_punctuations_transcript_owsm, clean_punctuations_transcript_whspr)
 import torch
+import numpy as np
 # Apply audio preprocessing and clean reference text
 def map_audio_and_text(batch):
     sr = batch["audio"]["sampling_rate"]
@@ -10,7 +12,7 @@ def map_audio_and_text(batch):
     batch["transcript"] = standardize_reference_text((batch["text"]))
     return batch
 
-# Apply batch prediction
+# Apply batch prediction wav2vec
 def map_batch_to_preds(batch, model, processor, device):
     with torch.no_grad():
         inputs = processor(
@@ -29,6 +31,26 @@ def map_batch_to_preds(batch, model, processor, device):
 
         pred_ids = torch.argmax(logits, dim=-1)
         batch["predicted"] = processor.batch_decode(pred_ids, skip_special_tokens=True)
+    return batch
+
+def map_batch_to_preds_owsm(batch, s2t):
+    batch_preds = []
+    for waveform in batch["waveform"]:
+        waveform = np.array(waveform, dtype=np.float32)
+        try:
+            result = s2t(
+                waveform,
+                lang_sym="<eng>",
+                task_sym="<asr>",
+                text_prev="worcestershire sauce"  # optional
+            )
+            pred_text_raw = result[0][-2]
+        except Exception as e:
+            print(f"Error during decoding: {e}")
+            pred_text_raw = ""
+        cleaned_pred = clean_punctuations_transcript_owsm(standardize_reference_text(pred_text_raw))
+        batch_preds.append(cleaned_pred)
+    batch["predicted"] = batch_preds
     return batch
 
 def map_batch_to_preds_whisper(batch, model, processor, device, forced_decoder_ids=None):

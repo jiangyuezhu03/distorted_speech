@@ -1,9 +1,9 @@
 import nltk
 nltk.data.path.append("/work/tc068/tc068/jiangyue_zhu/nltk_data")
+import torch
 from espnet2.bin.s2t_inference_ctc import Speech2TextGreedySearch
 import numpy as np
 from standardize_text import clean_punctuations_transcript_owsm, standardize_reference_text
-import torch
 import librosa
 import json
 # from jiwer import wer
@@ -13,7 +13,7 @@ import sys
 # not calculating cer yet, needs text standardization
 distortion_type=sys.argv[1] # must match folder names
 condition = sys.argv[2]
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res_unnorm/owsm-ctc4_{distortion_type}_{condition}_results.json"
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/owsm-ctc4_{distortion_type}_{condition}_results.json"
 # or espnet/owsm_ctc_v4_1B, espnet/owsm_ctc_v3.1_1B
 context_len_in_secs = 4  # left and right context when doing buffered inference
 batch_size = 32
@@ -32,7 +32,7 @@ references = []
 
 print("processing dataset")
 # subset = load_dataset("LIUM/tedlium", "release3", split="test",trust_remote_code = True)
-subset = load_from_disk(f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}_adjusted/{distortion_type}_{condition}")
+subset = load_from_disk(f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}")
 for sample in tqdm(subset,desc="processing dataset"):
     raw_transcript = sample['text']
     clean_transcript = standardize_reference_text(raw_transcript)

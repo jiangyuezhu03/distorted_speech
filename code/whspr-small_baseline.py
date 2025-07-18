@@ -53,7 +53,7 @@ results = {
 for ref, hyp in zip(result["transcript"], result["predicted"]):
     results["segments"].append({
         "reference": ref,
-        "prediction": hyp,
+        "prediction": clean_punctuations_transcript_whspr(hyp),
         "cer": None
     })
 
