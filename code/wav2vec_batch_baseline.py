@@ -12,7 +12,7 @@ from jiwer import cer
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 2. Load model and processor BEFORE defining the mapping function
-# model_name = "jonatasgrosman/wav2vec2-base"
+# model_name = "jonatasgrosman/wav2vec2-large-xlrs-53-english"
 model_name = "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e"
 
 processor = Wav2Vec2Processor.from_pretrained(model_name)

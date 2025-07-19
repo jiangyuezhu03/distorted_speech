@@ -23,7 +23,7 @@ WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-SCRIPTS=($OWSMCTC_SCRIPT)
+SCRIPTS=($WHISPER_SCRIPT)
 
 # iterate multiple models
 for SCRIPT in "${SCRIPTS[@]}"; do
@@ -42,14 +42,14 @@ for SCRIPT in "${SCRIPTS[@]}"; do
 #        echo "Running $SCRIPT in $ENV on distortion: $DIST"
 #        srun python $SCRIPT $DIST
 #    done
-#  CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_1_3" "mid_only_2_3" "mid_only_1.0")
-  CONFIGS=("0.5" "1.5" "2.5")
+    CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_1_3" "mid_only_2_3") #"mid_only_1.0"
+#    CONFIGS=("0.5" "1.5" "2.5")
 
-  DISTORTION_TYPE="fast"  # or any you want to fix or pass
-  for CONDITION in ${CONFIGS[@]};do
-    echo "Running condition: $CONDITION"
-    python $SCRIPT $DISTORTION_TYPE $CONDITION
-  done
+    DISTORTION_TYPE="narrowband"  # or any you want to fix or pass
+    for CONDITION in ${CONFIGS[@]};do
+      echo "Running condition: $CONDITION"
+      python $SCRIPT $DISTORTION_TYPE $CONDITION
+    done
   deactivate
 done
 # example use: sbatch job_launcher.sh
