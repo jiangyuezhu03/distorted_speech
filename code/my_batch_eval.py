@@ -12,7 +12,7 @@ def map_audio_and_text(batch):
     batch["transcript"] = standardize_reference_text((batch["text"]))
     return batch
 
-# Apply batch prediction wav2vec
+# Apply batch prediction wav2vec; with attention mask
 def map_batch_to_preds(batch, model, processor, device):
     with torch.no_grad():
         inputs = processor(
@@ -57,15 +57,18 @@ def map_batch_to_preds_whisper(batch, model, processor, device, forced_decoder_i
     with torch.no_grad():
         # Convert waveforms to input features (log-mel spectrograms)
         inputs = processor.feature_extractor(
-            batch["waveform"],
-            sampling_rate=16000,
-            return_tensors="pt"
+            batch["waveform"], sampling_rate=16000, return_tensors="pt", padding=True
         )
+        input_features = inputs.input_features.to(device)
+
+        # Manually create attention mask: 1 for non-zero, 0 for zero-padding
+        attention_mask = (input_features != 0).long()
         input_features = inputs.input_features.to(device)
 
         # Generate predicted token IDs (and decode internally)
         generated_ids = model.generate(
             input_features,
+            attention_mask=attention_mask,
             forced_decoder_ids=forced_decoder_ids
         )
 
