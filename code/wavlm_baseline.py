@@ -92,8 +92,8 @@ if __name__ == "__main__":
     # print("loaded model")
     # Load TED-LIUM dataset
 
-    dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
-    subset = load_from_disk(dataset_path)
+    # dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
+    # subset = load_from_disk(dataset_path)
 
     # first try on all 8 distortions
     # subset = load_from_disk(f"../ted3test_distorted/{distortion_type}")
