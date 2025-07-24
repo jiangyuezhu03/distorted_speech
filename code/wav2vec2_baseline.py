@@ -18,9 +18,8 @@ print(f"using {device}")
 # model_name="facebook/wav2vec2-base-10k-voxpopuli-ft-en"
 # model_name="jonatasgrosman/wav2vec2-large-xlsr-53-english"
 model_name="patrickvonplaten/wav2vec2-base-100h-with-lm"
-# model_path = "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--facebook--wav2vec2-base-10k-voxpopuli-ft-en/snapshots/328f7961ee96d2db3af8bbd22c685f5dd96f9692"
-model_path="/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e"
-
+# model_path="/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e"
+model_path="/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--jonatasgrosman--wav2vec2-large-xlsr-53-english/snapshots/569a6236e92bd5f7652a0420bfe9bb94c5664080"
 processor = Wav2Vec2ProcessorWithLM.from_pretrained(model_path)
 print('loaded processor')
 model = Wav2Vec2ForCTC.from_pretrained(model_path, use_safetensors=True).to(device).eval()

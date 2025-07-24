@@ -11,9 +11,25 @@ import sys
 
 distortion_type=sys.argv[1]
 condition = sys.argv[2]
-model_name = "openai/whisper-small"
+# model_name = "openai/whisper-small"
+model_name="/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_narrowband_cer_5e-05"
+model_basename = model_name.split('/')[-1]
+# Split into components
+parts = model_basename.split('_')
+model_short = parts[0].replace('whisper', 'whspr')  # converts "whisper" to "whspr"
+
+# Check if this is a fine-tuned model (path contains '/ft/')
+is_fine_tuned = '/ft/' in model_name
+# Get the fine-tuning details (last two parts if fine-tuned)
+ft_details = '_'.join(parts[-2:]) if is_fine_tuned else ''
+
+if is_fine_tuned:
+    model_identifier = f"ft-{model_short}_{ft_details}"
+else:
+    model_identifier = model_short
 # output_path = f"/work/tc068/tc068/jiangyue_zhu/res/whspr-small_{distortion_type}_results.json"
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/whspr-small_{distortion_type}_{condition}_results.json"
+# output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/whspr-small_{distortion_type}_{condition}_results.json"
+output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_{condition}_results.json"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
 processor = WhisperProcessor.from_pretrained(model_name)
