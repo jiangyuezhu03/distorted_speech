@@ -38,7 +38,7 @@ for SCRIPT in "${SCRIPTS[@]}"; do
 
     source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
     echo "activated $ENV"
-    python $SCRIPT narrowband mid_only_1_3
+    python $SCRIPT ${1} ${2}
 #    for DIST in "${DISTORTIONS[@]}"; do
 #        echo "Running $SCRIPT in $ENV on distortion: $DIST"
 #        srun python $SCRIPT $DIST

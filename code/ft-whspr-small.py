@@ -39,11 +39,10 @@ model.config.use_cache = False
 # optional but usually better to put model in train mode if training follows
 model.train()
 
-
 # processor includes both tokenizer and feature extractor
 processor = WhisperProcessor.from_pretrained(model_name, language="english", task="transcribe")
-print("Pad token ID:", processor.tokenizer.pad_token_id) # 50257
-print("EOS token ID:", processor.tokenizer.eos_token_id) # 50257
+# print("Pad token ID:", processor.tokenizer.pad_token_id) # 50257
+# print("EOS token ID:", processor.tokenizer.eos_token_id) # 50257
 
 def prepare_dataset_old(batch):
     audio = batch["audio"]
@@ -69,7 +68,7 @@ def prepare_dataset(batch):
     # Tokenize targets
     labels = processor.tokenizer(
         batch["text"].lower(),
-        padding="max_length",
+        padding="max_length", # should change to longest just in case
         max_length=225,
         truncation=True
     )

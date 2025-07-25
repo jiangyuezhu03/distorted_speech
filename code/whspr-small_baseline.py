@@ -10,9 +10,9 @@ from tqdm import tqdm
 import sys
 
 distortion_type=sys.argv[1]
-condition = sys.argv[2]
+condition = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else None
 # model_name = "openai/whisper-small"
-model_name="/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_narrowband_cer_5e-05"
+model_name=f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_{distortion_type}_cer_5e-05"
 model_basename = model_name.split('/')[-1]
 # Split into components
 parts = model_basename.split('_')
@@ -29,7 +29,10 @@ else:
     model_identifier = model_short
 # output_path = f"/work/tc068/tc068/jiangyue_zhu/res/whspr-small_{distortion_type}_results.json"
 # output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/whspr-small_{distortion_type}_{condition}_results.json"
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_{condition}_results.json"
+if condition:
+    output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_{condition}_results.json"
+else:
+    output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_results.json"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
 processor = WhisperProcessor.from_pretrained(model_name)
@@ -45,7 +48,10 @@ references = []
 # subset = load_dataset("LIUM/tedlium", "release3", split="test",trust_remote_code = True)
 # subset = load_from_disk(f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}")
 # the adjusted dataset
-dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
+if condition:
+    dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
+else:
+    dataset_path = f"../ted3test_distorted/{distortion_type}"
 subset = load_from_disk(dataset_path)
 subset = subset.map(map_audio_and_text)
 print("mapping")

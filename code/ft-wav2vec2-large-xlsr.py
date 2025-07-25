@@ -1,14 +1,35 @@
+import sys, os
+import torch
 from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC, TrainingArguments, Trainer
+from datasets import load_from_disk, DatasetDict
+from standardize_text import standardize_reference_text
+import numpy as np
+from jiwer import cer, wer, mer
+# from nemo_text_processing.text_normalization.normalize import Normalizer
+from transformers import DataCollatorCTCTokenizer
 
 
+distortion_type = sys.argv[1]
+distorted_ds = load_from_disk(f"../ted3train_5000_distorted/{distortion_type}")
+split = 0.8
+train_size = int(split * len(distorted_ds))
+
+train_ds = distorted_ds.select(range(train_size))
+val_ds = distorted_ds.select(range(train_size, len(distorted_ds)))
+
+dataset = DatasetDict({
+    "train": train_ds,
+    "validation": val_ds
+})
+# normalizer = Normalizer(input_case='cased', lang='en')
 model_name = "jonatasgrosman/wav2vec2-large-xlsr-53-english"
 processor = Wav2Vec2Processor.from_pretrained(model_name)
 model = Wav2Vec2ForCTC.from_pretrained(model_name).to(device)
 model.train()
+data_collator = DataCollatorCTCTokenizer(processor=processor, padding=True)
 
 def prepare_dataset(batch):
     audio = batch["audio"]
-
     inputs = processor(
         audio["array"],
         sampling_rate=audio["sampling_rate"],
