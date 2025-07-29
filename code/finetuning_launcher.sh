@@ -17,7 +17,7 @@ ENV="new_test_env"
 source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
 echo "activated $ENV"
 
-DISTORTION_TYPE=("reversed")
+DISTORTION_TYPE=${1} # narrowband, reversed , sinewave
 # change to take argument for script
 SCRIPT="ft-whspr-small.py"
     for DIST in "${DISTORTION_TYPE[@]}"; do

@@ -1,3 +1,4 @@
+# having import problem, not in use
 import os
 import sys
 from tqdm import tqdm
@@ -6,14 +7,14 @@ import librosa
 import datasets
 from datasets import load_from_disk, Dataset
 
-from scipy.signal import butter, sosfiltfilt, hilbert, spectrogram
-import scipy.signal as signal
-from scipy.signal.windows import triang, kaiser
-import scipy.io.wavfile as wav
-from scipy.interpolate import interp1d, interp2d, RectBivariateSpline
-
-from gammatone.gtgram import gtgram
-from gammatone.filters import centre_freqs, make_erb_filters, erb_filterbank
+# from scipy.signal import butter, sosfiltfilt, hilbert, spectrogram
+# import scipy.signal as signal
+# from scipy.signal.windows import triang, kaiser
+# import scipy.io.wavfile as wav
+# from scipy.interpolate import interp1d, interp2d, RectBivariateSpline
+#
+# from gammatone.gtgram import gtgram
+# from gammatone.filters import centre_freqs, make_erb_filters, erb_filterbank
 
 # import parselmouth
 
@@ -471,6 +472,21 @@ def run_narrowband_sweep(ds):
         distortion_condition = f"{distortion_type}_{config['name']}"
         gen_new_dataset(ds, distortion_type, distortion_condition, apply_func)
 
+def run_reversed_sweep(ds):
+    print('running sweep')
+    sweep_configs = [
+        {"name": "40ms", "win_size": 40},
+        {"name": "50ms", "win_size": 50},
+        {"name": "80ms", "win_size": 80},
+        {"name": "100ms", "win_size": 100},
+    ]
+    for config in sweep_configs:
+        def apply_func(y, sr):
+            return time_reverse(y, sr, config["win_size"])
+
+        distortion_type = "reversed"
+        distortion_condition = f"{distortion_type}_{config['name']}"
+        gen_new_dataset(ds, distortion_type, distortion_condition, apply_func)
 
 # changed apply_distortion
 def apply_distortion(ds, distortion_type, condition, sweep=False):
@@ -482,6 +498,9 @@ def apply_distortion(ds, distortion_type, condition, sweep=False):
         distortion_func = fast
     elif distortion_type == "reversed":
         distortion_func = time_reverse
+        if sweep:
+            run_reversed_sweep(ds)
+            return
     elif distortion_type == "narrowband":
         distortion_func = narrowband
         if sweep:
@@ -510,8 +529,8 @@ def apply_distortion(ds, distortion_type, condition, sweep=False):
 
 # tried with a different music
 def gen_new_dataset(original_ds, distortion_type, distortion_condition,apply_function):
-    # outpath = f"../ted3test_distorted_adjusted/{distortion_type}/{distortion_condition}"
-    outpath = f"../ted1train_distorted/{distortion_type}"
+    outpath = f"../ted3test_distorted_adjusted/{distortion_type}/{distortion_condition}"
+    # outpath = f"../ted1train_distorted/{distortion_type}"
     os.makedirs(outpath, exist_ok=True)
 
     distort_ds = []
@@ -544,7 +563,7 @@ def gen_new_dataset(original_ds, distortion_type, distortion_condition,apply_fun
 if __name__ == "__main__":
     distortion_type = sys.argv[1].lower()
     # my_ds = load_from_disk(f"../ted3test_distorted/clean/") # basis clean data to apply distortions to
-    my_ds = load_from_disk("../ted3train_5000")
+    my_ds = load_from_disk("../ted3test_distorted/clean")
     my_ds = my_ds.cast_column("audio", datasets.Audio(decode=False))
     sweep = sys.argv[2].lower() == "true" if len(sys.argv) > 2 else False
     apply_distortion(my_ds, distortion_type, sweep)

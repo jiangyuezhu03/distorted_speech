@@ -1,3 +1,4 @@
+import pdb
 import sys, os
 import torch
 from transformers import WhisperTokenizer, WhisperProcessor, WhisperForConditionalGeneration
@@ -13,6 +14,7 @@ normalizer = Normalizer(input_case='cased', lang='en')
 
 distortion_type = sys.argv[1]
 distorted_ds = load_from_disk(f"../ted3train_5000_distorted/{distortion_type}")
+print(f"training on {distortion_type}")
 split = 0.8
 
 train_size = int(split * len(distorted_ds))
@@ -30,16 +32,29 @@ print(f'using {device}')
 
 model_name = "openai/whisper-small"
 model = WhisperForConditionalGeneration.from_pretrained(model_name).to(device)
+trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+print(f"Trainable parameters before freeze: {trainable_params}") # 241734912
+
+# for name, param in model.named_parameters(): # 153580800 if name start with encoder
+#     if name.startswith("model.decoder"): # same 88154112 if not name start with
+#         param.requires_grad = False
+
+# # freeze decoder
+for name, param in model.model.decoder.named_parameters():
+    param.requires_grad = False # 88154112
+
 model.generation_config.language = "english"
 model.generation_config.task = "transcribe"
 model.generation_config.forced_decoder_ids = None
 # for debugging if whisper set it to true
 model.config.use_cache = False
 
+trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+print(f"Trainable parameters after freeze: {trainable_params}")
 # optional but usually better to put model in train mode if training follows
 model.train()
 
-# processor includes both tokenizer and feature extractor
+#  processor includes both tokenizer and feature extractor
 processor = WhisperProcessor.from_pretrained(model_name, language="english", task="transcribe")
 # print("Pad token ID:", processor.tokenizer.pad_token_id) # 50257
 # print("EOS token ID:", processor.tokenizer.eos_token_id) # 50257
@@ -93,22 +108,22 @@ def compute_metrics(pred):
     # change to process list of strings
     standard_pred = [normalizer.normalize(clean_punctuations_transcript_whspr(pred_sent.strip())) for pred_sent in pred_str]
     standard_label = [standardize_reference_text(label_sent.strip()) for label_sent in label_str]
-    print(f"label: {standard_label}","\n",f"pred: {standard_pred}")
+    # print(f"label: {standard_label}","\n",f"pred: {standard_pred}")
     return {"cer": 100 * cer(standard_label,standard_pred)}
 
 
-lr=5e-5
+lr=1e-5
 metric_for_best='cer'
 # Create and use a proper output path
-output_path = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_{distortion_type}_{metric_for_best}_{lr}"
+output_path = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_{distortion_type}_{metric_for_best}_{lr}"
 os.makedirs(output_path, exist_ok=True)
 
 training_args = Seq2SeqTrainingArguments(
     output_dir=output_path,
-    num_train_epochs=4,# added
+    num_train_epochs=4,# overriden by max_steps
     per_device_train_batch_size=12,
     gradient_accumulation_steps=1,
-    learning_rate=5e-5,
+    learning_rate=lr,
     warmup_steps=100,
     max_steps=2000,
     gradient_checkpointing=False, # set to false for debugging
@@ -117,15 +132,15 @@ training_args = Seq2SeqTrainingArguments(
     per_device_eval_batch_size=8,
     predict_with_generate=True,
     generation_max_length=225,
-    save_steps=1000,
-    eval_steps=1000,
+    save_steps=500,
+    eval_steps=500,
     logging_steps=25,
     report_to=["tensorboard"],
     load_best_model_at_end=True,
     metric_for_best_model="cer",
     greater_is_better=False,
     push_to_hub=False,
-    save_total_limit=3,  # optional, to limit disk usage
+    # save_total_limit=3,  # optional, to limit disk usage
 )
 
 trainer = Seq2SeqTrainer(

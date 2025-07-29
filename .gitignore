@@ -1,6 +1,6 @@
 jetbrains_cache/
 jetbrains_cach/
-.cache/
+.cache/huggingface
 code/ted3test_cache
 espnet/
 speechbrain/

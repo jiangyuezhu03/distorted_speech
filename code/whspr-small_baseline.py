@@ -9,30 +9,64 @@ from datasets import load_dataset,load_from_disk
 from tqdm import tqdm
 import sys
 
-distortion_type=sys.argv[1]
-condition = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else None
-# model_name = "openai/whisper-small"
-model_name=f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_{distortion_type}_cer_5e-05"
-model_basename = model_name.split('/')[-1]
-# Split into components
-parts = model_basename.split('_')
-model_short = parts[0].replace('whisper', 'whspr')  # converts "whisper" to "whspr"
+model_type = sys.argv[1]  # "base" or "ft"
 
-# Check if this is a fine-tuned model (path contains '/ft/')
-is_fine_tuned = '/ft/' in model_name
-# Get the fine-tuning details (last two parts if fine-tuned)
-ft_details = '_'.join(parts[-2:]) if is_fine_tuned else ''
+if model_type == "base":
+    if len(sys.argv) < 3:
+        raise ValueError("Usage: base <distortion_type> [condition]")
+    distortion_type = sys.argv[2]
+    condition = sys.argv[3] if len(sys.argv) > 3 else None
+    model_name = "openai/whisper-small"
+    model_identifier = "whspr-small"
 
-if is_fine_tuned:
-    model_identifier = f"ft-{model_short}_{ft_details}"
+elif model_type == "ft":
+    if len(sys.argv) < 4:
+        raise ValueError("Usage: ft <enc|full> <trained_on_distortion> <lr> [condition]")
+    training_scope = sys.argv[2]  # "enc" or "full"
+    trained_on_distortion = sys.argv[3]
+    lr = sys.argv[4]
+    condition = sys.argv[5] if len(sys.argv) > 5 else None
+    if training_scope == "enc":
+        model_name = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_{trained_on_distortion}_cer_5e-05"
+        model_identifier = f"ft-whisper-small_enc_{trained_on_distortion}_cer_5e-05"
+    elif training_scope == "full":
+        # skip 'full' in the model path
+        model_name = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_{trained_on_distortion}_cer_5e-05"
+        model_identifier = f"ft-whisper-small_{trained_on_distortion}_cer_5e-05"
+    else:
+        raise ValueError("training_scope must be 'enc' or 'full'")
+    # For now, assume lr is fixed
+    model_name = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_{training_scope}_{trained_on_distortion}_cer_{lr}e-05"
+    model_basename = model_name.split("/")[-1]
+    parts = model_basename.split("_")
+    model_short = parts[0].replace("whisper", "whspr")
+    ft_details = '_'.join(parts[1:])  # everything after 'whisper-small'
+    model_output_identifier = f"ft-{model_short}_{ft_details}"
+    print(f"output identifier {model_output_identifier}")
+
+    # Evaluation distortion type is same as trained-on unless you change it
+    distortion_type = trained_on_distortion
+
 else:
-    model_identifier = model_short
-# output_path = f"/work/tc068/tc068/jiangyue_zhu/res/whspr-small_{distortion_type}_results.json"
-# output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/whspr-small_{distortion_type}_{condition}_results.json"
+    raise ValueError("First argument must be either 'base' or 'ft'")
+
+# Final output path
 if condition:
-    output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_{condition}_results.json"
+    dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
+    print(f"distortion_type: {distortion_type}, condition: {condition}")
+    # Avoid repeating distortion_type in output file if condition already includes it
+    if model_type == "ft":
+        output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_output_identifier}_{condition}_results.json"
+    else:
+        output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_output_identifier}_{distortion_type}_{condition}_results.json"
 else:
-    output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_results.json"
+    dataset_path = f"../ted3test_distorted/{distortion_type}"
+    output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_output_identifier}_{distortion_type}_results.json"
+
+print(f"model name: {model_name}")
+print(f"datapath: {dataset_path}")
+print(f"output: {output_path}")
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
 processor = WhisperProcessor.from_pretrained(model_name)
@@ -47,11 +81,7 @@ references = []
 
 # subset = load_dataset("LIUM/tedlium", "release3", split="test",trust_remote_code = True)
 # subset = load_from_disk(f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{distortion_type}")
-# the adjusted dataset
-if condition:
-    dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
-else:
-    dataset_path = f"../ted3test_distorted/{distortion_type}"
+
 subset = load_from_disk(dataset_path)
 subset = subset.map(map_audio_and_text)
 print("mapping")
