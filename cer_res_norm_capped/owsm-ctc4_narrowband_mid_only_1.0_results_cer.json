@@ -6933,6 +6933,6 @@
   ],
   "overall_wer": null,
   "overall_cer": 0.9684,
-  "avg_cer": 0.9586588744588744,
+  "avg_cer": 0.9602461471861472,
   "median_cer": 0.9677
 }
