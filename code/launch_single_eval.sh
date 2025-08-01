@@ -24,7 +24,6 @@ WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 SCRIPTS=($WHISPER_SCRIPT)
-SCRIPTS=($WAV2VEC_SCRIPT)
 DISTORTION_TYPE=${1}
 
 # iterate multiple models
@@ -40,36 +39,8 @@ for SCRIPT in "${SCRIPTS[@]}"; do
 
     source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
     echo "activated $ENV"
-#    python $SCRIPT ${1} ${2}
-#    for DIST in "${DISTORTIONS[@]}"; do
-#        echo "Running $SCRIPT in $ENV on distortion: $DIST"
-#        srun python $SCRIPT $DIST
-#    done
-    if [[ "$DISTORTION_TYPE" == "narrowband" ]]; then
-        CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_2_3" "mid_only_1.0" "all_bands_1_3")
-#        CONFIGS=("all_bands_1_3") "mid_only_1_3"
-    elif [[ "$DISTORTION_TYPE" == "fast" ]]; then
-        CONFIGS=("0.5" "1.5" "2.5")
-    elif [[ "$DISTORTION_TYPE" == "reversed" ]]; then
-        CONFIGS=("20ms" "31ms" "62ms")
-    else
-        CONFIGS=()  # No condition configs needed
-    fi
-
-    if [ ${#CONFIGS[@]} -eq 0 ]; then
-        # Run with no condition argument
-        echo "Running distortion: $DISTORTION_TYPE with no condition"
-        python $SCRIPT "ft" "enc" $DISTORTION_TYPE "1"
-    else
-        for CONDITION in "${CONFIGS[@]}"; do
-            echo "Running condition: $CONDITION"
-            python $SCRIPT "ft" "enc" $DISTORTION_TYPE "1" $CONDITION
-            #python whspr-small_baseline.py ft enc narrowband_mid_only_2_3 1 mid_only_1_3
-#            python $SCRIPT "base" $DISTORTION_TYPE $CONDITION
-        done
-    fi
+    python whspr-small_baseline.py base narrowband all_bands_1_3
 
 done
 
 # example use: sbatch job_launcher.sh
-

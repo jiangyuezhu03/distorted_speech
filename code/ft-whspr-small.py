@@ -112,7 +112,7 @@ def compute_metrics(pred):
     return {"cer": 100 * cer(standard_label,standard_pred)}
 
 
-lr=1e-5
+lr=5e-5
 metric_for_best='cer'
 # Create and use a proper output path
 output_path = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_{distortion_type}_{metric_for_best}_{lr}"
@@ -124,7 +124,7 @@ training_args = Seq2SeqTrainingArguments(
     per_device_train_batch_size=12,
     gradient_accumulation_steps=1,
     learning_rate=lr,
-    warmup_steps=100,
+    warmup_steps=200,
     max_steps=2000,
     gradient_checkpointing=False, # set to false for debugging
     fp16=True,

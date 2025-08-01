@@ -16,11 +16,21 @@ export HF_HUB_OFFLINE=1 # uncomment for wavlm
 ENV="new_test_env"
 source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
 echo "activated $ENV"
+WHISPER_SCRIPT="ft-whspr-small.py"
+WAV2VEC_SCRIPT="ft-wav2vec2-large-xlsr.py"
+SCRIPTS=($WHISPER_SCRIPT $WAV2VEC_SCRIPT)
 
-DISTORTION_TYPE=${1} # narrowband, reversed , sinewave
 # change to take argument for script
-SCRIPT="ft-whspr-small.py"
+MODEL=${1}
+DISTORTION_TYPE=${2} # narrowband, reversed , sinewave
+
+if [[ "$MODEL" == "wav2vec" ]]; then
+    SCRIPT=$WHISPER_SCRIPT
+elif [[ "$MODEL" == "whisper" ]]; then
+    SCRIPT=$WAV2VEC_SCRIPT
+fi
     for DIST in "${DISTORTION_TYPE[@]}"; do
         echo "Running $SCRIPT in $ENV on distortion: $DIST"
         srun python $SCRIPT $DIST
     done
+done

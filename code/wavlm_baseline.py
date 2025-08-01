@@ -19,10 +19,10 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"using {device}")
 
 # Load model and processor: processor throws an error
-model_name = "patrickvonplaten/wavlm-libri-clean-100h-large"
-# You can try "wavlm-base-plus" or anjulRajendraSharma/WavLm-base-en
-processor = AutoProcessor.from_pretrained(model_name, use_safetensors=True)#local_files_only = True,
-model = WavLMForCTC.from_pretrained(model_name,  use_safetensors=True).to(device).eval()
+# model_name = "patrickvonplaten/wavlm-libri-clean-100h-large"
+model_name = "../.cache/huggingface/hub/models--patrickvonplaten--wavlm-libri-clean-100h-large/snapshots/e70e3a062ec399c46008ee55d1fb52c7ba338d5c"#
+processor = AutoProcessor.from_pretrained(model_name,local_files_only=True)#local_files_only = True,
+model = WavLMForCTC.from_pretrained(model_name,  use_safetensors=True, local_files_only=True).to(device).eval()
 # subset = load_from_disk(f"../ted3test_distorted/{distortion_type}")
 dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
 subset = load_from_disk(dataset_path)
@@ -115,17 +115,18 @@ if __name__ == "__main__":
         "segments": [],
         "overall_cer": None
     }
-
+    cer_list = []
     for ref, hyp in zip(result["transcript"], result["predicted"]):
-        cer_score = cer(ref, hyp)
+        cer_score = round(cer(ref, hyp), 4)
+        cer_list.append(cer_score)
         results["segments"].append({
             "reference": ref,
             "prediction": hyp,
-            "cer": cer_score
+            "cer": min(cer_score, 1.0)
         })
 
     results["overall_cer"] = cer(result["transcript"], result["predicted"])
-
+    results["median_cer"] = np.median(cer_list)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
