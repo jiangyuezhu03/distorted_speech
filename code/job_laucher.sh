@@ -23,7 +23,7 @@ WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-SCRIPTS=($WHISPER_SCRIPT)
+#SCRIPTS=($WHISPER_SCRIPT)
 SCRIPTS=($WAV2VEC_SCRIPT)
 DISTORTION_TYPE=${1}
 
@@ -59,11 +59,11 @@ for SCRIPT in "${SCRIPTS[@]}"; do
     if [ ${#CONFIGS[@]} -eq 0 ]; then
         # Run with no condition argument
         echo "Running distortion: $DISTORTION_TYPE with no condition"
-        python $SCRIPT "ft" "enc" $DISTORTION_TYPE "1"
+        python $SCRIPT "ft" $DISTORTION_TYPE "1e-04"
     else
         for CONDITION in "${CONFIGS[@]}"; do
             echo "Running condition: $CONDITION"
-            python $SCRIPT "ft" "enc" $DISTORTION_TYPE "1" $CONDITION
+            python $SCRIPT "ft" $DISTORTION_TYPE "1e-04" $CONDITION
             #python whspr-small_baseline.py ft enc narrowband_mid_only_2_3 1 mid_only_1_3
 #            python $SCRIPT "base" $DISTORTION_TYPE $CONDITION
         done
