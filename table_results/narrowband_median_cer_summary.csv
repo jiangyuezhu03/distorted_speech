@@ -1,0 +1,8 @@
+Condition,whspr-small,owsm-ctc4,wav2vec2-base-lm,wavlm-large,wav2vec2-large-xlsr,owsm4,ft-whspr-small_enc
+low_mid_1_3,,,,,,,
+high_mid_1_3,,,,,,,
+low_high_1_3,,,,,,,
+all_bands_1_3,,,,,,,
+mid_only_1_3,,,,,,,
+mid_only_2_3,,,,,,,
+mid_only_1.0,,,,,,,
