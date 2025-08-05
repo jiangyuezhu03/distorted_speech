@@ -8,3 +8,7 @@
 ../log/distortion_baseline_7508447.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_sinewave_cer_1e-05
 ../log/distortion_baseline_7510196.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_narrowband_cer_1e-05
 ../log/distortion_baseline_7510197.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_reversed_cer_1e-05
+../log/distortion_baseline_7511872.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_narrowband_mid_only_2_3_cer_1e-05
+../log/distortion_baseline_7513431.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/wav2vec2-large-xlsr_narrowband_cer_1e-05
+../log/distortion_baseline_7513464.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/wav2vec2-large-xlsr_narrowband_cer_5e-05
+../log/distortion_baseline_7513732.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_narrowband_cer_5e-05

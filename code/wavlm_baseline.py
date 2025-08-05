@@ -11,10 +11,13 @@ from jiwer import cer
 from tqdm import tqdm
 
 distortion_type=sys.argv[1] # must match folder names
-condition=sys.argv[2]
-# output_path = f"../res/cer_res/wavlm-large_{distortion_type}_{condition}_results.json"
-output_path = f"../res/cer_res/wavlm-large_{distortion_type}_{condition}_results.json"
-
+condition = sys.argv[2] if len(sys.argv)>2 else None
+if condition: # with normalizer, now save to processed folder directly
+    output_path = f"/work/tc068/tc068/jiangyue_zhu/cer_res_norm_capped/wavlm-large_{distortion_type}_{condition}_results_cer.json"
+    dataset_path= f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
+else: # not using "adjusted"
+    output_path = f"/work/tc068/tc068/jiangyue_zhu/cer_res_norm_capped/wavlm-large_{distortion_type}_results_cer.json"
+    dataset_path= f"../ted3test_distorted/{distortion_type}"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"using {device}")
 
@@ -23,111 +26,48 @@ print(f"using {device}")
 model_name = "../.cache/huggingface/hub/models--patrickvonplaten--wavlm-libri-clean-100h-large/snapshots/e70e3a062ec399c46008ee55d1fb52c7ba338d5c"#
 processor = AutoProcessor.from_pretrained(model_name,local_files_only=True)#local_files_only = True,
 model = WavLMForCTC.from_pretrained(model_name,  use_safetensors=True, local_files_only=True).to(device).eval()
-# subset = load_from_disk(f"../ted3test_distorted/{distortion_type}")
-dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
+
 subset = load_from_disk(dataset_path)
 print("loaded dataset")
+subset = subset.map(map_audio_and_text)
 
 results = {"segments": [], "overall_wer": None}
 predictions = []
 references = []
-print("processing dataset")
-
-# for sample in tqdm(subset,desc="processing dataset"):
-#     raw_transcript = sample['text']
-#     clean_transcript = standardize_reference_text(raw_transcript)
-
-#     # Skip non-speech markers
-#     if "ignore_time_segment_in_scoring" in clean_transcript:
-#         continue
-
-#     audio = sample["audio"]
-#     waveform = audio["array"]
-#     sr = audio["sampling_rate"]
-
-#     # Resample to 16kHz if needed
-#     if sr != 16000:
-#         waveform = torchaudio.transforms.Resample(orig_freq=sr, new_freq=16000)(
-#             torch.from_numpy(waveform)).numpy()
-#         sr = 16000
-
-#     # Tokenize and run model
-#     inputs = processor(waveform, sampling_rate=sr, return_tensors="pt", padding=True)
-#     input_values = inputs.input_values.to(device)
-
-#     with torch.no_grad():
-#         logits = model(input_values).logits
-
-#     predicted_ids = torch.argmax(logits, dim=-1)
-#     pred_text = processor.batch_decode(predicted_ids, skip_special_tokens=True)[0].lower().strip()
-
-#     predictions.append(pred_text)
-#     references.append(clean_transcript)
-
-#     sentence_wer = None
-#     results["segments"].append({
-#         "reference": clean_transcript,
-#         "prediction": pred_text,
-#         "cer": None
-#     })
-
-# # Overall WER
-# results["overall_cer"] = None
-
-# # Save to JSON
-# with open(output_path, "w", encoding="utf-8") as f:
-#     json.dump(results, f, indent=2, ensure_ascii=False)
-
-# print(f"Saved results to {output_path}")
 
 def predict_batch(batch):
     return map_batch_to_preds(batch, model, processor, device)
 
-# Main block just handles argument parsing and I/O
-if __name__ == "__main__":
-    distortion_type = sys.argv[1]
-    # condition = sys.argv[2]
+result = subset.map(
+    predict_batch,
+    batched=True,
+    batch_size=16,
+    remove_columns=["audio", "text", "waveform", "sampling_rate"],
+    num_proc=1,
+    load_from_cache_file=False
+)
+print("generating results")
+cer_list = []
+cer_list_capped = []
+results = {
+    "segments": [],
+    "overall_cer": None
+}
 
-    # output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/wav2vec2-base-lm_{distortion_type}_{condition}_results.json"
-    # print("loaded model")
-    # Load TED-LIUM dataset
+for ref, hyp in zip(result["transcript"], result["predicted"]):
+    cer_score = cer(ref, hyp)
+    cer_list.append(cer_score)
+    cer_list_capped.append(cer_score)
+    results["segments"].append({
+        "reference": ref,
+        "prediction": hyp,
+        "cer": min(cer_score, 1.0)
+    })
 
-    # dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
-    # subset = load_from_disk(dataset_path)
+results["overall_cer"] = cer(result["transcript"], result["predicted"])
+results["avg_cer"] = np.mean(cer_list_capped)
+results["median_cer"] = np.median(cer_list)
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(results, f, indent=2, ensure_ascii=False)
 
-    # first try on all 8 distortions
-    # subset = load_from_disk(f"../ted3test_distorted/{distortion_type}")
-    print("loaded dataset")
-    subset = subset.map(map_audio_and_text)
-    print("mapping")
-
-    result = subset.map(
-        predict_batch,
-        batched=True,
-        batch_size=16,
-        remove_columns=["audio", "text", "waveform", "sampling_rate"],
-        num_proc=1,
-        load_from_cache_file=False
-    )
-    print("generating results")
-
-    results = {
-        "segments": [],
-        "overall_cer": None
-    }
-    cer_list = []
-    for ref, hyp in zip(result["transcript"], result["predicted"]):
-        cer_score = round(cer(ref, hyp), 4)
-        cer_list.append(cer_score)
-        results["segments"].append({
-            "reference": ref,
-            "prediction": hyp,
-            "cer": min(cer_score, 1.0)
-        })
-
-    results["overall_cer"] = cer(result["transcript"], result["predicted"])
-    results["median_cer"] = np.median(cer_list)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-
-    print(f"Saved results to {output_path}")
+print(f"Saved results to {output_path}")
