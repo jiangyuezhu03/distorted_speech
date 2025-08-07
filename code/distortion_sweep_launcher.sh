@@ -18,12 +18,12 @@ export HF_HUB_OFFLINE=1 # uncomment for wavlm
 WHISPER_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/whspr-small_baseline.py"
 OWSMCTC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm-ctc_baseline.py"
 OWSM4_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm4_baseline.py"
-WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm-base_baseline.py"
+WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm_baseline.py"
 WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
-DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
+DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-SCRIPTS=($WAV2VEC_SCRIPT)
+SCRIPTS=($WAVLM_SCRIPT)
 
 # iterate multiple models
 for SCRIPT in "${SCRIPTS[@]}"; do

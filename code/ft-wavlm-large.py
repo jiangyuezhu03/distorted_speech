@@ -1,10 +1,10 @@
 import sys, os
 import os
 # os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-# os.environ["WANDB_DISABLED"] = "true" # was in the last run, uncomment to avoid warning in future runs
+os.environ["WANDB_DISABLED"] = "true"
 
 import torch
-from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC, TrainingArguments, Trainer
+from transformers import Wav2Vec2Processor,AutoProcessor, WavLMForCTC, TrainingArguments, Trainer
 from datasets import load_from_disk, DatasetDict
 from standardize_text import standardize_reference_text
 import numpy as np
@@ -13,7 +13,7 @@ from jiwer import cer, wer, mer
 from data_collator import DataCollatorCTCWithPadding
 # wav2vec does not need lm normalizer
 # normalizer = Normalizer(input_case='cased', lang='en')
-distortion_type = sys.argv[1] # must be fast, reversed, narrowband, or sinewave
+distortion_type = sys.argv[1]
 distorted_ds = load_from_disk(f"../ted3train_5000_distorted/{distortion_type}")
 split = 0.8
 train_size = int(split * len(distorted_ds))
@@ -27,9 +27,12 @@ dataset = DatasetDict({
 })
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
-model_name = "jonatasgrosman/wav2vec2-large-xlsr-53-english"
-processor = Wav2Vec2Processor.from_pretrained(model_name)
-model = Wav2Vec2ForCTC.from_pretrained(
+model_name = "../.cache/huggingface/hub/models--patrickvonplaten--wavlm-libri-clean-100h-large/snapshots/e70e3a062ec399c46008ee55d1fb52c7ba338d5c"#
+processor = Wav2Vec2Processor.from_pretrained(model_name,local_files_only=True)#local_files_only = True,
+# evaluation model load
+# model = WavLMForCTC.from_pretrained(model_name,  use_safetensors=True, local_files_only=True).to(device).eval()
+
+model =  WavLMForCTC.from_pretrained(
     model_name,
     attention_dropout=0.1,
     hidden_dropout=0.1,
@@ -40,14 +43,21 @@ model = Wav2Vec2ForCTC.from_pretrained(
     pad_token_id=processor.tokenizer.pad_token_id,
     vocab_size=len(processor.tokenizer)).to(device)
 model.train()
-def prepare_dataset_from_blog(batch): # blog
+def prepare_dataset_old(batch):
     audio = batch["audio"]
-    # batched output is "un-batched"
-    batch["input_values"] = processor(audio["array"], sampling_rate=audio["sampling_rate"]).input_values[0]
+    inputs = processor(
+        audio["array"],
+        sampling_rate=audio["sampling_rate"],
+        return_tensors="pt",
+        padding = "longest"
+    )
 
+    batch["input_values"] = inputs.input_values[0].numpy()
     with processor.as_target_processor():
-        batch["labels"] = processor(batch["text"]).input_ids
+        batch["labels"] = processor(batch["text"].lower()).input_ids
+
     return batch
+
 
 def prepare_dataset(batch):
     audio = batch["audio"]
@@ -85,13 +95,13 @@ def compute_metrics(pred):
 lr=5e-5
 metric_for_best='cer'
 # Create and use a proper output path
-output_path = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/wav2vec2-large-xlsr_{distortion_type}_{metric_for_best}_{lr}"
+output_path = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/wavlm-large_{distortion_type}_{metric_for_best}_{lr}"
 os.makedirs(output_path, exist_ok=True)
 
 training_args = TrainingArguments(
     output_dir=output_path,
     group_by_length=True,
-    per_device_train_batch_size=6,
+    per_device_train_batch_size=6, #6: allocate 72
     gradient_accumulation_steps=2,
     eval_strategy="steps",
     num_train_epochs=30,

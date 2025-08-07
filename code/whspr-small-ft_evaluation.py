@@ -63,3 +63,9 @@ print(f"output: {output_path}")
 # import pdb;pdb.set_trace()
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
+
+
+# new ft eval logic
+base_model_name="whisper-small" # or whspr-small?
+finetuning_condition=sys.argv[1] # narrowband_cer_1e-04
+model_path=f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/{base_model_name}_{finetuning_condition}"
