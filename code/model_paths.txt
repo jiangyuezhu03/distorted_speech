@@ -12,3 +12,4 @@
 ../log/distortion_baseline_7513431.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/wav2vec2-large-xlsr_narrowband_cer_1e-05
 ../log/distortion_baseline_7513464.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/wav2vec2-large-xlsr_narrowband_cer_5e-05
 ../log/distortion_baseline_7513732.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_narrowband_cer_5e-05
+../log/distortion_finetuning_7518346.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/wav2vec2-large-xlsr_fast_cer_5e-05

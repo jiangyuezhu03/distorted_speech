@@ -43,6 +43,7 @@ model =  WavLMForCTC.from_pretrained(
     pad_token_id=processor.tokenizer.pad_token_id,
     vocab_size=len(processor.tokenizer)).to(device)
 model.train()
+
 def prepare_dataset_old(batch):
     audio = batch["audio"]
     inputs = processor(
@@ -92,7 +93,7 @@ def compute_metrics(pred):
 
     return {"cer": 100 * cer(label_norm, pred_norm)}
 
-lr=5e-5
+lr=1e-5
 metric_for_best='cer'
 # Create and use a proper output path
 output_path = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/wavlm-large_{distortion_type}_{metric_for_best}_{lr}"
@@ -105,14 +106,14 @@ training_args = TrainingArguments(
     gradient_accumulation_steps=2,
     eval_strategy="steps",
     num_train_epochs=30,
-    fp16=True,
-    save_steps=200,
+    fp16=False, # set to false for debugging
+    save_steps=400,
     eval_steps=200,
     logging_steps=25,
     learning_rate=lr,
-    warmup_steps=300,
+    warmup_steps=500,
     max_steps=3000,
-    # save_total_limit=3,
+    save_total_limit=3
 )
 
 trainer = Trainer(

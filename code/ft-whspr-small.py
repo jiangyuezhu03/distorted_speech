@@ -2,7 +2,7 @@ import pdb
 import sys, os
 import torch
 from transformers import WhisperTokenizer, WhisperProcessor, WhisperForConditionalGeneration
-from transformers import Seq2SeqTrainingArguments, Seq2SeqTrainer
+from transformers import Seq2SeqTrainingArguments, Seq2SeqTrainer, EarlyStoppingCallback
 from datasets import load_from_disk, DatasetDict
 from standardize_text import (standardize_reference_text, clean_punctuations_transcript_whspr)
 import numpy as np
@@ -132,7 +132,7 @@ training_args = Seq2SeqTrainingArguments(
     per_device_eval_batch_size=8,
     predict_with_generate=True,
     generation_max_length=225,
-    save_steps=200,
+    save_steps=400,
     eval_steps=200,
     logging_steps=25,
     report_to=["tensorboard"],
@@ -140,7 +140,7 @@ training_args = Seq2SeqTrainingArguments(
     metric_for_best_model="cer",
     greater_is_better=False,
     push_to_hub=False,
-    # save_total_limit=3,  # optional, to limit disk usage
+    save_total_limit=3,  # save the last 3. optional, to limit disk usage
 )
 
 trainer = Seq2SeqTrainer(
@@ -150,6 +150,7 @@ trainer = Seq2SeqTrainer(
     eval_dataset=dataset["validation"],  # FIXED this from dataset["test"]
     data_collator=data_collator,
     compute_metrics=compute_metrics,
+    callbacks=[EarlyStoppingCallback(early_stopping_patience=3)],
     tokenizer=processor  # FIXED this from processor.feature_extractor
 )
 

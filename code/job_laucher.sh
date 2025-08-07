@@ -18,13 +18,13 @@ export HF_HUB_OFFLINE=1 # uncomment for wavlm
 WHISPER_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/whspr-small_baseline.py"
 OWSMCTC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm-ctc_baseline.py"
 OWSM4_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm4_baseline.py"
-WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm-base_baseline.py"
+WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm_baseline.py"
 WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #SCRIPTS=($WHISPER_SCRIPT)
-SCRIPTS=($WAV2VEC_SCRIPT)
+SCRIPTS=($WAVLM_SCRIPT)
 DISTORTION_TYPE=${1}
 
 # iterate multiple models
@@ -46,8 +46,8 @@ for SCRIPT in "${SCRIPTS[@]}"; do
 #        srun python $SCRIPT $DIST
 #    done
     if [[ "$DISTORTION_TYPE" == "narrowband" ]]; then
-        CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_2_3" "mid_only_1.0" "all_bands_1_3")
-#        CONFIGS=("all_bands_1_3") "mid_only_1_3"
+#        CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_2_3" "mid_only_1.0" "all_bands_1_3")
+        CONFIGS=("all_bands_1_3") #"mid_only_1_3"
     elif [[ "$DISTORTION_TYPE" == "fast" ]]; then
         CONFIGS=("0.5" "1.5" "2.5")
     elif [[ "$DISTORTION_TYPE" == "reversed" ]]; then
@@ -59,11 +59,11 @@ for SCRIPT in "${SCRIPTS[@]}"; do
     if [ ${#CONFIGS[@]} -eq 0 ]; then
         # Run with no condition argument
         echo "Running distortion: $DISTORTION_TYPE with no condition"
-        python $SCRIPT "ft" $DISTORTION_TYPE "1e-04"
+        python $SCRIPT $DISTORTION_TYPE
     else
         for CONDITION in "${CONFIGS[@]}"; do
-            echo "Running condition: $CONDITION"
-            python $SCRIPT "ft" $DISTORTION_TYPE "1e-04" $CONDITION
+            echo "Running $SCRIPT on $CONDITION"
+            python $SCRIPT $DISTORTION_TYPE $CONDITION
             #python whspr-small_baseline.py ft enc narrowband_mid_only_2_3 1 mid_only_1_3
 #            python $SCRIPT "base" $DISTORTION_TYPE $CONDITION
         done

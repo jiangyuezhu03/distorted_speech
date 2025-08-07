@@ -100,9 +100,9 @@ training_args = TrainingArguments(
     eval_steps=200,
     logging_steps=25,
     learning_rate=lr,
-    warmup_steps=300,
+    warmup_steps=500,
     max_steps=3000,
-    # save_total_limit=3,
+    save_total_limit=3
 )
 
 trainer = Trainer(

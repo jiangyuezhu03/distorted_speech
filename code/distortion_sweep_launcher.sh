@@ -21,10 +21,9 @@ OWSM4_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm4_baseline.py"
 WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm_baseline.py"
 WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
-DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed")
+#DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-SCRIPTS=($WAVLM_SCRIPT)
-
+SCRIPTS=($WAV2VEC_SCRIPT $WAVLM_SCRIPT)
 # iterate multiple models
 for SCRIPT in "${SCRIPTS[@]}"; do
     if [[ "$SCRIPT" == "$WHISPER_SCRIPT" ||  "$SCRIPT" == "$WAVLM_SCRIPT" || "$SCRIPT" == "$WAV2VEC_SCRIPT" ]]; then

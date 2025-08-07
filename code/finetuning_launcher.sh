@@ -12,6 +12,8 @@
 # Set up environment variables
 export HF_HOME="/work/tc068/tc068/jiangyue_zhu/.cache/huggingface"
 export XDG_CACHE_HOME="/work/tc068/tc068/jiangyue_zhu/jetbrains_cache"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
 export HF_HUB_OFFLINE=1 # uncomment for wavlm
 ENV="new_test_env"
 source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
@@ -33,7 +35,7 @@ elif [[ "$MODEL" == "wav2vec" ]]; then
 elif [[ "$MODEL" == "wavlm" ]]; then
     SCRIPT=$WAVLM_SCRIPT
 fi
-DISTORTION_TYPE=("fast" "reversed" "narrowband" "narrowband_mid_only_2_3" "sinewave")
+DISTORTION_TYPE=("reversed" "narrowband" "narrowband_mid_only_2_3" "sinewave") # skip fast for wavlm
 # for unfinished
 #DISTORTION_TYPE=("reversed" "narrowband" "narrowband_mid_only_2_3" "sinewave")
 # sweep run
