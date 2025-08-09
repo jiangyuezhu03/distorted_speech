@@ -6932,7 +6932,7 @@
     }
   ],
   "overall_cer": 0.4643,
-  "avg_cer": 0.5104,
+  "avg_cer": 0.5021,
   "median_cer": 0.4957,
   "overall_cmer": 0.42095398138572904,
   "avg_cmer": 0.4764,
