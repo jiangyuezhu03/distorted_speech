@@ -24,7 +24,7 @@ WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
 #SCRIPTS=($WHISPER_SCRIPT)
-SCRIPTS=($WAVLM_SCRIPT)
+SCRIPTS=($OWSM4_SCRIPT)
 DISTORTION_TYPE=${1}
 
 # iterate multiple models
@@ -47,7 +47,8 @@ for SCRIPT in "${SCRIPTS[@]}"; do
 #    done
     if [[ "$DISTORTION_TYPE" == "narrowband" ]]; then
 #        CONFIGS=("low_mid_1_3" "high_mid_1_3" "low_high_1_3" "mid_only_2_3" "mid_only_1.0" "all_bands_1_3")
-        CONFIGS=("all_bands_1_3") #"mid_only_1_3"
+        CONFIGS=("mid_only_1_3") #"all_bands_1_3"
+
     elif [[ "$DISTORTION_TYPE" == "fast" ]]; then
         CONFIGS=("0.5" "1.5" "2.5")
     elif [[ "$DISTORTION_TYPE" == "reversed" ]]; then
