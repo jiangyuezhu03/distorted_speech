@@ -44,7 +44,7 @@ def update_results_json(path):
 
 def process_directory(dir_root):
     for fname in os.listdir(dir_root):
-        if fname.endswith(".json"):
+        if fname.endswith(".json") and "owsm" in fname:
             full_path = os.path.join(dir_root, fname)
             try:
                 update_results_json(full_path)
@@ -52,5 +52,5 @@ def process_directory(dir_root):
                 print(f"Skipping {fname}: {e}")
 
 if __name__ == "__main__":
-    default_root = "../cer_res_norm_capped/base_comparison"
+    default_root = "../cer_res_norm_capped/"
     process_directory(default_root)

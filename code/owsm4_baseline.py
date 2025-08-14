@@ -32,9 +32,9 @@ else: # not using "adjusted"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 s2t = Speech2Text.from_pretrained(
-    model_tag="espnet/owsm_v4_base_102M",  # or whatever latest model tag you're using
+    model_tag="espnet/owsm_v4_medium_1B",
     device=device,
-    beam_size=5,          # Beam size for decoding
+    beam_size=6,          # used to be 5
     ctc_weight=0.0,       # Pure attention decoder (as in Whisper)
     maxlenratio=0.0,      # Let the model decide max decoding length
     lang_sym="<eng>",
@@ -42,7 +42,6 @@ s2t = Speech2Text.from_pretrained(
 )
 
 print("Installed OWSM encoder-decoder pipeline")
-
 
 print("Processing dataset")
 subset = load_from_disk(dataset_path)

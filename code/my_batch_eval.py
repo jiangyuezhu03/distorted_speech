@@ -33,6 +33,42 @@ def map_batch_to_preds(batch, model, processor, device):
         batch["predicted"] = processor.batch_decode(pred_ids, skip_special_tokens=True)
     return batch
 
+def map_batch_to_preds_lm(batch, model, processor, device):
+    with torch.no_grad():
+        # Preprocess audio
+        inputs = processor(
+            batch["waveform"],
+            sampling_rate=16000,
+            return_tensors="pt",
+            padding=True
+        )
+        input_values = inputs.input_values.to(device)
+        attention_mask = inputs.get("attention_mask")
+        if attention_mask is not None:
+            attention_mask = attention_mask.to(device)
+
+        # Forward pass
+        logits = model(
+            input_values,
+            attention_mask=attention_mask
+        ).logits
+
+        logits_cpu = logits.cpu().numpy()
+
+        try:
+            if np.isnan(logits_cpu).any() or np.isinf(logits_cpu).any():
+                raise ValueError("Invalid values in logits")
+            predicted = processor.batch_decode(logits_cpu)
+        except Exception as e:
+            print(f"[LM decode failed: {e}] Falling back to greedy decoding.")
+            pred_ids = torch.argmax(logits, dim=-1)
+            predicted = processor.tokenizer.batch_decode(pred_ids)
+
+    # Return only serializable fields
+    return {"predicted": predicted}
+
+
+
 def map_batch_to_preds_owsm(batch, s2t):
     batch_preds = []
     for waveform in batch["waveform"]:

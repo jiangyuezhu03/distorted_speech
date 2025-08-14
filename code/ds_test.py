@@ -1,60 +1,26 @@
-# from datasets import load_from_disk,load_dataset, Dataset
-# from transformers import WhisperTokenizer, WhisperFeatureExtractor
-# import nemo_text_processing
-import os
-# from nemo_text_processing.text_normalization.normalize import Normalizer
-# normalizer = Normalizer(input_case='cased', lang='en')
-# feature_extractor = WhisperFeatureExtractor.from_pretrained("openai/whisper-small")
-# tokenizer= WhisperTokenizer.from_pretrained("openai/whisper-small", language="english", task="transcribe")
+from transformers import TrainingArguments
+import torch
+from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 
-# input_str= "for 80 years i lived" # not normalizing
-# labels = tokenizer(input_str).input_ids
-# decoded_with_special = tokenizer.decode(labels, skip_special_tokens=False)
-# decoded_str = tokenizer.decode(labels, skip_special_tokens=True)
-#
-# print(f"Input:                 {input_str}")
-# print(f"Decoded w/ special:    {decoded_with_special}")
-# print(f"Decoded w/out special: {decoded_str}")
-# print(f"Are equal:             {input_str == decoded_str}")
-# original_distorted_ds = load_from_disk("/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/clean")
-# new_adjusted_ds = load_from_disk("/work/tc068/tc068/jiangyue_zhu/ted3test_distorted_adjusted/narrowband_adjusted/narrowband_high_mid_1_3")
-# ted3train=load_dataset("LIUM/tedlium", "release3", split="train")
-#
-# import random
-# random.seed(8)
-# # 3. Randomly sample 5000 indices
-# sample_indices = random.sample(range(len(ted3train)), 5000)
-# subset = ted3train.select(sample_indices)
-# print("selected")
-# subset.save_to_disk("../ted3train_5000")
-# print("saved")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+wav2vec_lm = "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--patrickvonplaten--wav2vec2-base-100h-with-lm/snapshots/0612413f4d1532f2e50c039b2f014722ea59db4e"
+wav2vec_xlsr= "/work/tc068/tc068/jiangyue_zhu/.cache/huggingface/hub/models--jonatasgrosman--wav2vec2-large-xlsr-53-english/snapshots/569a6236e92bd5f7652a0420bfe9bb94c5664080"
+wav2vec_lm_model=Wav2Vec2ForCTC.from_pretrained(wav2vec_lm).to(device).eval()
+wav2vec_xlsr_model=Wav2Vec2ForCTC.from_pretrained(wav2vec_xlsr).to(device).eval()
 
-distortion_type="narrowband"
-condition="mid_only_1_3"
-print("start")
-model_name = "/work/tc068/tc068/jiangyue_zhu/.cache/ft/owsm-ctc4_narrowband_cer_5e-05"
+trainable_params = sum(p.numel() for p in wav2vec_lm_model.parameters() if p.requires_grad)
+print(f"Trainable parameters in wav2vec_lm: {trainable_params}") #94396320
+trainable_params2 = sum(p.numel() for p in wav2vec_xlsr_model.parameters() if p.requires_grad)
+print(f"Trainable parameters in wav2vec_xlsr: {trainable_params2}") # 315472545
+# train_a = torch.load("../.cache/ft/whisper-small_enc_narrowband_cer_5e-05/checkpoint-1200/training_args.bin")
+# train_b = torch.load("../.cache/ft/whisper-small_enc_reversed_cer_5e-05/training_args.bin")
+# dict1 = vars(train_a)
+# dict2 = vars(train_b)
+# # Compare TrainingArguments subset
+# for key in dict1:
+#     if key == "output_dir":
+#         continue
+#     if dict1[key] != dict2[key]:
+#         print(f"Difference in {key}: {dict1[key]} vs {dict2[key]}")
 
-model_basename = model_name.split('/')[-1]
-print(model_basename)
-# Split into components
-parts = model_basename.split('_')
 
-model_short = parts[0].replace('whisper', 'whspr')  # converts "whisper" to "whspr"
-
-# Check if this is a fine-tuned model (path contains '/ft/')
-is_fine_tuned = '/ft/' in model_name
-
-# Get the fine-tuning details (last two parts if fine-tuned)
-ft_details = '_'.join(parts[-2:]) if is_fine_tuned else ''
-
-# Construct the model identifier for output path
-if is_fine_tuned:
-    model_identifier = f"ft-{model_short}_{ft_details}"
-else:
-    model_identifier = model_short
-
-# Now use this in your output path
-output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_{condition}_results.json"
-print(output_path)
-# /work/tc068/tc068/jiangyue_zhu/res/cer_res/ft-whspr-small_cer_5e-05_narrowband_mid_only_1_3_results.json
-# /work/tc068/tc068/jiangyue_zhu/res/cer_res/ft-owsm-ctc4_cer_5e-05_narrowband_mid_only_1_3_results.json

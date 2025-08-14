@@ -35,9 +35,9 @@ elif [[ "$MODEL" == "wav2vec" ]]; then
 elif [[ "$MODEL" == "wavlm" ]]; then
     SCRIPT=$WAVLM_SCRIPT
 fi
-DISTORTION_TYPE=("reversed" "narrowband" "narrowband_mid_only_2_3" "sinewave") # skip fast for wavlm
+#DISTORTION_TYPE=("reversed" "narrowband" "narrowband_mid_only_2_3" "sinewave") # skip fast for wavlm
 # for unfinished
-#DISTORTION_TYPE=("reversed" "narrowband" "narrowband_mid_only_2_3" "sinewave")
+DISTORTION_TYPE=("narrowband" "sinewave")
 # sweep run
 
 for DIST in "${DISTORTION_TYPE[@]}"; do

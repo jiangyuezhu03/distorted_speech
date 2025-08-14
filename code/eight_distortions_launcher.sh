@@ -13,7 +13,9 @@
 # Set up environment variables
 export HF_HOME="/work/tc068/tc068/jiangyue_zhu/.cache/huggingface"
 export XDG_CACHE_HOME="/work/tc068/tc068/jiangyue_zhu/jetbrains_cache"
-#export HF_HUB_OFFLINE=1 # uncomment for wavlm
+export HF_HUB_OFFLINE=1 # uncomment for wavlm
+# prevent CUDA out of memory
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 # Define combinations
 #ENVIRONMENTS=("my_test_env" "espnet_new")
@@ -22,15 +24,16 @@ OWSMCTC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm-ctc_baseline.py"
 OWSM4_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/owsm4_baseline.py"
 WAVLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wavlm_baseline.py"
 WAV2VEC_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec_batch_baseline.py"
+WAV2VECLM_SCRIPT="/work/tc068/tc068/jiangyue_zhu/code/wav2vec2-lm_baseline.py"
 #SCRIPTS=("$WHISPER_SCRIPT" "$OWSMCTC_SCRIPT")
 #DISTORTIONS=("clean" "fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-DISTORTIONS=("fast" "reversed" "narrowband" "tone_vocoded" "noise_vocoded" "sinewave" "glimpsed" "sculpted")
-SCRIPTS=($OWSMCTC_SCRIPT)
-
+DISTORTIONS=("narrowband" "tone_vocoded" "noise_vocoded")
+#SCRIPTS=($WAV2VECLM_SCRIPT)
+SCRIPTS=($OWSM4_SCRIPT)
 # iterate multiple models
 for SCRIPT in "${SCRIPTS[@]}"; do
-    if [[ "$SCRIPT" == "$WHISPER_SCRIPT" ||  "$SCRIPT" == "$WAVLM_SCRIPT" || "$SCRIPT" == "$WAV2VEC_SCRIPT" ]]; then
-        ENV="my_test_env"
+    if [[ "$SCRIPT" == "$WHISPER_SCRIPT" ||  "$SCRIPT" == "$WAVLM_SCRIPT" || "$SCRIPT" == "$WAV2VEC_SCRIPT" || "$SCRIPT" == "$WAV2VECLM_SCRIPT" ]]; then
+        ENV="new_test_env"
     elif [[ "$SCRIPT" == "$OWSMCTC_SCRIPT" || "$SCRIPT" == "$OWSM4_SCRIPT" ]]; then
         ENV="espnet_new"
         export PYTHONPATH=/work/tc068/tc068/jiangyue_zhu/espnet:$PYTHONPATH

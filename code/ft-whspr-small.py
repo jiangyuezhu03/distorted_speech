@@ -1,4 +1,3 @@
-import pdb
 import sys, os
 import torch
 from transformers import WhisperTokenizer, WhisperProcessor, WhisperForConditionalGeneration
@@ -9,6 +8,7 @@ import numpy as np
 from jiwer import cer, wer, mer
 from nemo_text_processing.text_normalization.normalize import Normalizer
 from data_collator import DataCollatorSpeechSeq2SeqWithPadding
+from ft_helper import find_latest_checkpoint
 
 normalizer = Normalizer(input_case='cased', lang='en')
 
@@ -155,6 +155,16 @@ trainer = Seq2SeqTrainer(
 )
 
 print('training')
+
+latest_ckpt = find_latest_checkpoint(output_path)
+
+if latest_ckpt:
+    print(f"Resuming from {latest_ckpt}")
+    trainer.train(resume_from_checkpoint=latest_ckpt)
+else:
+    print("Starting new training")
+    trainer.train()
+
 trainer.train()
 
 trainer.save_model()
