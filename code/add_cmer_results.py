@@ -1,6 +1,6 @@
 import json
 import statistics
-import os
+import os, sys
 import numpy as np
 from metrics_helper import char_mer
 
@@ -44,7 +44,7 @@ def update_results_json(path):
 
 def process_directory(dir_root):
     for fname in os.listdir(dir_root):
-        if fname.endswith(".json") and "owsm" in fname:
+        if fname.endswith(".json") and "ft" in fname:
             full_path = os.path.join(dir_root, fname)
             try:
                 update_results_json(full_path)
@@ -53,4 +53,6 @@ def process_directory(dir_root):
 
 if __name__ == "__main__":
     default_root = "../cer_res_norm_capped/"
-    process_directory(default_root)
+    root= sys.argv[1] if len(sys.argv) > 1 else default_root
+
+    process_directory(root)

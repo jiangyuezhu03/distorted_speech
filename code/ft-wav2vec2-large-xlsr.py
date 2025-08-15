@@ -1,8 +1,8 @@
 import sys, os
 import os
-# os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-# os.environ["WANDB_DISABLED"] = "true" # was in the last run, uncomment to avoid warning in future runs
-
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+os.environ["WANDB_DISABLED"] = "true" # was in the last run, uncomment to avoid warning in future runs
+# must keep to avoid error in api_key not configured
 import torch
 from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC, TrainingArguments, Trainer
 from datasets import load_from_disk, DatasetDict

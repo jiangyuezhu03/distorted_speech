@@ -1,71 +1,101 @@
-model_type = sys.argv[1]  # "base" or "ft"
+import numpy as np
+from standardize_text import standardize_reference_text, clean_punctuations_transcript_whspr
+import torch
+import torchaudio
+import json
+from jiwer import cer
+from transformers import WhisperProcessor, WhisperForConditionalGeneration
+from my_batch_eval import map_audio_and_text, map_batch_to_preds_whisper
+from datasets import load_dataset,load_from_disk
+from tqdm import tqdm
+import sys
+#
+from nemo_text_processing.text_normalization.normalize import Normalizer
+normalizer = Normalizer(input_case='cased', lang='en')
 
-if model_type == "base":
-    if len(sys.argv) < 3:
-        raise ValueError("Usage: base <distortion_type> [condition]")
-    distortion_type = sys.argv[2]
-    condition = sys.argv[3] if len(sys.argv) > 3 else None
-    model_name = "openai/whisper-small"
-    model_identifier = "whspr-small"
+model = sys.argv[1]
+distortion_type = sys.argv[2]
+condition = sys.argv[3] if len(sys.argv) > 3 else None
 
-elif model_type == "ft":
-    if len(sys.argv) < 4:
-        raise ValueError("Usage: ft <enc|full> <trained_on_distortion> <lr> [condition]")
-    training_scope = sys.argv[2]  # "enc" or "full"
-    trained_on_distortion = sys.argv[3]
-    lr = sys.argv[4]
-    condition = sys.argv[5] if len(sys.argv) > 5 else None
-    if training_scope == "enc":
-        model_name = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_{trained_on_distortion}_cer_{lr}"
-        model_identifier = f"ft-whisper-small_enc_{trained_on_distortion}_cer_{lr}"
-    elif training_scope == "full":
-        # skip 'full' in the model path
-        model_name = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_{trained_on_distortion}_cer_{lr}"
-        model_identifier = f"ft-whisper-small_{trained_on_distortion}_cer_{lr}"
-    else:
-        raise ValueError("training_scope must be 'enc' or 'full'")
-    # For now, assume lr is fixed
-    model_name = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_{training_scope}_{trained_on_distortion}_cer_{lr}"
-    model_basename = model_name.split("/")[-1]
-    parts = model_basename.split("_")
-    model_short = parts[0].replace("whisper", "whspr")
-    ft_details = '_'.join(parts[1:])  # everything after 'whisper-small'
-    print(f"details {ft_details}")
-    model_output_identifier = f"ft-{model_short}_{ft_details}"
-    print(f"output identifier {model_output_identifier}")
 
-    # Evaluation distortion type is same as trained-on unless you change it
-    if "_" not in trained_on_distortion:
-        distortion_type = trained_on_distortion
-    else:
-        distortion_type=trained_on_distortion.split("_")[0]
-    print(f"distortions {distortion_type}")
+model_path = f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/{model}"
+model_name = model
 
-else:
-    raise ValueError("First argument must be either 'base' or 'ft'")
+model_basename = model_name.split("_")[0]
+ft_dis_type = model_name.split("_")[1]
+model_basename = model_basename.replace("whisper", "whspr")
+ft_details = "_".join(model_name.split("_")[1:])
+print(f"ft_details {ft_details}")
+model_output_identifier = f"ft-{model_basename}_{ft_details}"
+print(f"output identifier {model_output_identifier}")
+
 
 # Final output path
 if condition:
     dataset_path = f"../ted3test_distorted_adjusted/{distortion_type}_adjusted/{distortion_type}_{condition}"
     print(f"distortion_type: {distortion_type}, condition: {condition}")
-    # Avoid repeating distortion_type in output file if condition already includes it
-    if model_type == "ft":
-        output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_output_identifier}_{condition}_results.json"
-    else:
-        output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_identifier}_{distortion_type}_{condition}_results.json"
+    output_path = f"/work/tc068/tc068/jiangyue_zhu/cer_res_norm_capped/{model_output_identifier}_{condition}_results_cer.json"
+
 else:
     dataset_path = f"../ted3test_distorted/{distortion_type}"
-    output_path = f"/work/tc068/tc068/jiangyue_zhu/res/cer_res/{model_output_identifier}_{distortion_type}_results.json"
+    print(f"distortion_type: {distortion_type}")
+    output_path= f"/work/tc068/tc068/jiangyue_zhu/cer_res_norm_capped/{model_output_identifier}_{distortion_type}_results_cer.json"
 
-print(f"model name: {model_name}")
 print(f"datapath: {dataset_path}")
 print(f"output: {output_path}")
 # import pdb;pdb.set_trace()
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
 
+# does the processor use custom checkpoint or vanilla whisper?
+processor = WhisperProcessor.from_pretrained(model_path)
+model = WhisperForConditionalGeneration.from_pretrained(model_path).to(device).eval()
+# make sure uses Eng
+forced_ids = processor.get_decoder_prompt_ids(language="english", task="transcribe")
+model.config.forced_decoder_ids = forced_ids
 
-# new ft eval logic
-base_model_name="whisper-small" # or whspr-small?
-finetuning_condition=sys.argv[1] # narrowband_cer_1e-04
-model_path=f"/work/tc068/tc068/jiangyue_zhu/.cache/ft/{base_model_name}_{finetuning_condition}"
+results = {"segments": [], "overall_cer": None}
+predictions = []
+references = []
+
+subset = load_from_disk(dataset_path)
+subset = subset.map(map_audio_and_text)
+print("mapping")
+
+def predict_batch(batch):
+    return map_batch_to_preds_whisper(batch, model, processor, device,forced_ids)
+
+result = subset.map(
+        predict_batch,
+        batched=True,
+        batch_size=16,
+        remove_columns=["audio", "text", "waveform", "sampling_rate"]
+    )
+print("generating results")
+cer_list=[]
+cer_list_capped=[]
+for ref, hyp in zip(result["transcript"], result["predicted"]):
+    pred_text=normalizer.normalize(clean_punctuations_transcript_whspr(hyp))
+    references.append(ref)
+    predictions.append(pred_text)
+    cer_score=cer(ref,pred_text)
+    results["segments"].append({
+        "reference": ref,
+        "prediction": pred_text,
+        "cer": cer_score
+    })
+
+    cer_list_capped.append(min(cer_score, 1.0))
+    cer_list.append(cer_score)
+
+# Overall WER
+results["overall_cer"] = cer(references, predictions)
+results["avg_cer"] = np.mean(cer_list_capped)
+results["median_cer"] = np.median(cer_list)
+
+
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(results, f, indent=2, ensure_ascii=False)
+
+print(f"Saved results to {output_path}")

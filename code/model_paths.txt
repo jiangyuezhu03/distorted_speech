@@ -1,1 +1,2 @@
 ../log/distortion_finetuning_7519488.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_reversed_cer_5e-05
+../log/distortion_finetuning_7525880.out:model saved to /work/tc068/tc068/jiangyue_zhu/.cache/ft/whisper-small_enc_narrowband_mid_only_2_3_cer_5e-05
