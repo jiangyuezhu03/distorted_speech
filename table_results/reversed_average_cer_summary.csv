@@ -1,7 +1,7 @@
-Model,ft-whspr-small,owsm4,wavlm-large,owsm-ctc4,wav2vec2-large-xlrs,whspr-small
-20ms,,,,,,
-31ms,,,,,,
-40ms,,,,,,
-50ms,,,,,,
-62ms,,,,,,
-80ms,,,,,,
+Condition,owsm-ctc4,owsm4,wav2vec2-base-lm,wav2vec2-large-xlsr,wavlm-large,whspr-small
+20ms,0.0418,0.0479,,0.1354,0.0949,0.0467
+31ms,0.065,0.074,,0.1813,0.1402,0.0745
+40ms,0.1329,0.1842,,0.2762,0.2057,0.1889
+50ms,0.3468,0.5397,,0.4226,0.367,0.3795
+62ms,0.6559,0.7499,,0.5851,0.5183,0.5884
+80ms,0.8771,0.8003,,0.6973,0.6359,0.7258
