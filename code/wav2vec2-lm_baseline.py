@@ -21,20 +21,6 @@ else: # not using "adjusted"
     output_path = f"/work/tc068/tc068/jiangyue_zhu/cer_res_norm_capped/wav2vec2-base-lm_{distortion_type}_results_cer.json"
     dataset_path= f"../ted3test_distorted/{distortion_type}"
 
-def predict_batch(batch):
-    return map_batch_to_preds_lm(batch, model, processor, device)
-
-
-# def predict_batch(batch):
-#     inputs = processor(batch["audio"], sampling_rate=16000, return_tensors="pt", padding=True).to(device)
-#     with torch.no_grad():
-#         outputs = model(**inputs)
-#         decoded = processor.batch_decode(outputs.logits.cpu().numpy(), skip_special_tokens=True)
-#
-#     return {
-#         "predicted_text": decoded  # this is now a list of strings, one per item in batch
-#     }
-
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'using {device}')
@@ -44,6 +30,8 @@ model=Wav2Vec2ForCTC.from_pretrained(model_name, use_safetensors=True).to(device
 subset = load_from_disk(dataset_path)
 subset = subset.map(map_audio_and_text,load_from_cache_file=False)
 print("mapping")
+def predict_batch(batch):
+    return map_batch_to_preds_lm(batch, model, processor, device)
 
 result = subset.map(
     predict_batch,

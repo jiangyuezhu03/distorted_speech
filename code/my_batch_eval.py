@@ -58,13 +58,17 @@ def map_batch_to_preds_lm(batch, model, processor, device):
         try:
             if np.isnan(logits_cpu).any() or np.isinf(logits_cpu).any():
                 raise ValueError("Invalid values in logits")
-            predicted = processor.batch_decode(logits_cpu)
+
+            # Decode with LM (always returns Wav2Vec2DecoderWithLMOutput)
+            decoded_output = processor.batch_decode(logits_cpu)
+            predicted = decoded_output.text  # <-- list of decoded strings
+
         except Exception as e:
             print(f"[LM decode failed: {e}] Falling back to greedy decoding.")
             pred_ids = torch.argmax(logits, dim=-1)
             predicted = processor.tokenizer.batch_decode(pred_ids)
-
-    # Return only serializable fields
+        # normalise
+        predicted = [p.lower() for p in predicted]
     return {"predicted": predicted}
 
 

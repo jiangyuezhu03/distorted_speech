@@ -44,7 +44,7 @@ def update_results_json(path):
 
 def process_directory(dir_root):
     for fname in os.listdir(dir_root):
-        if fname.endswith(".json") and "owsm4_n" in fname:
+        if fname.endswith(".json") and "lm" in fname:
             full_path = os.path.join(dir_root, fname)
             try:
                 update_results_json(full_path)
