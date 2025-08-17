@@ -1,0 +1,9 @@
+Condition,ft-whspr-small,whspr-small
+clean,0.0462,0.0343
+mid_only_1_3,0.8934,0.9711
+low_mid_1_3,0.8316,0.9671
+high_mid_1_3,0.7639,0.9488
+low_high_1_3,0.8548,0.9708
+mid_only_2_3,0.2538,0.7805
+mid_only_1.0,0.3603,0.3151
+all_bands_1_3,0.6397,0.7105
