@@ -37,7 +37,7 @@ elif [[ "$MODEL" == "wavlm" ]]; then
 fi
 #DISTORTION_TYPE=("reversed" "narrowband" "narrowband_mid_only_2_3" "sinewave") # skip fast for wavlm
 # for unfinished
-DISTORTION_TYPE=("narrowband")
+DISTORTION_TYPE=("fast")
 # sweep run
 
 for DIST in "${DISTORTION_TYPE[@]}"; do

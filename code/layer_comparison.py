@@ -6,7 +6,6 @@ import seaborn as sns
 import os, sys
 import pandas as pd
 
-eval_distortion=sys.argv[1] if len(sys.argv)>1 else None
 outpath="../ft_layer_comparison"
 os.makedirs(outpath, exist_ok=True)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -24,12 +23,6 @@ model_fast = WhisperModel.from_pretrained(
     "../.cache/ft/whisper-small_enc_fast_cer_5e-05/checkpoint-1600").to(device).eval()
 model_baseline=WhisperModel.from_pretrained("openai/whisper-small").to(device).eval()
 
-dataset_path=f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{eval_distortion}"
-dataset = load_from_disk(dataset_path)
-rng = random.Random(42)
-idx = rng.sample(range(len(dataset)), k=200)
-subset = dataset.select(idx)
-print(f"selected {len(subset)} samples")
 # Make sure each example exposes raw waveform at 16k
 def map_audio(batch):
     # HF audio column yields {"array": np.ndarray, "sampling_rate": int}
@@ -41,7 +34,6 @@ def map_audio(batch):
     batch["waveform"] = wav
     return batch
 
-subset = subset.map(map_audio)
 #mapping is successfull
 # 3) Utilities
 @torch.no_grad()
@@ -85,14 +77,8 @@ def compare_models(
     model_b, name_b: str,
     subset,
     batch_size=16,
-    distortion=eval_distortion
+    distortion=None
 ):
-    """
-    Compare two Whisper encoder models layerwise.
-    Produces:
-    1) Full layer × layer similarity heatmap (averaged across batches)
-    2) Same-layer diagonal similarity line plot (averaged across batches)
-    """
     first_batch = True
     count_batches = 0
     L = None
@@ -107,7 +93,6 @@ def compare_models(
             sum_matrix = np.zeros((L, L))
             sum_diag = np.zeros(L)
 
-        # Compute layer × layer cosine for this batch
         mat = np.zeros((L, L))
         diag = np.zeros(L)
         for i in range(L):
@@ -159,15 +144,27 @@ def compare_models(
 
 
 if __name__ == "__main__":
+    eval_distortion=sys.argv[1] if len(sys.argv)>1 else None
+    dataset_path = f"/work/tc068/tc068/jiangyue_zhu/ted3test_distorted/{eval_distortion}"
+    dataset = load_from_disk(dataset_path)
+    rng = random.Random(42)
+    idx = rng.sample(range(len(dataset)), k=200)
+    subset = dataset.select(idx)
+    print(f"selected {len(subset)} samples")
+    subset = subset.map(map_audio)
     # compare_models(model_narrowband_23, "narrowband 2-3",
     #                model_narrowband, "narrowband 1-3",
     #                subset, distortion="narrowband")
-    # compare_models(model_fast, "fast",
+    # compare_models(model_sinewave, "sinewave",
     #                model_reversed, "reversed",
-    #                subset)
+    #                subset, distortion="reversed")
     compare_models(model_sinewave, "sinewave",
                    model_baseline, "baseline",
-                   subset, distortion="sinewave")
-    # compare_models(model_sinewave, "sinewave",
-    #                model_narrowband, "narrowband",
-    #                subset)
+                   subset, distortion="reversed")
+    # compare_models(model_fast, "fast",
+    #                model_reversed, "reversed",
+    #                subset, distortion="reversed")
+
+    # compare_models(model_fast, "fast",
+    #                model_reversed, "reversed",
+    #                subset, distortion="fast")

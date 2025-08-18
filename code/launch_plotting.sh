@@ -17,7 +17,7 @@ export HF_HUB_OFFLINE=1 # uncomment for wavlm
 ENV="new_test_env"
 source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
 echo "activated $ENV"
-srun python layer_comparison.py
+srun python layer_comparison.py "reversed"
 
 
 

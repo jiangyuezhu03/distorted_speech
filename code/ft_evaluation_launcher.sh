@@ -17,7 +17,6 @@ export HF_HUB_OFFLINE=1 # uncomment for wavlm
 #ENVIRONMENTS=("my_test_env" "espnet_new")
 WHISPER_EVAL="/work/tc068/tc068/jiangyue_zhu/code/whspr-small-ft_evaluation.py"
 WAV2VEC_EVAL="/work/tc068/tc068/jiangyue_zhu/code/wav2vec-ft_evaluation.py"
-
 ENV="new_test_env"
 source /work/tc068/tc068/jiangyue_zhu/test_venv/$ENV/bin/activate
 echo "activated $ENV"
@@ -25,8 +24,8 @@ echo "activated $ENV"
 MODEL_TYPE=${1}
 #FT_MODELS= the list read from ${MODEL_TYPE}_finetuend_model_list.txt
 DISTORTION_TYPE=${2}
-mapfile -t FT_MODELS < "/work/tc068/tc068/jiangyue_zhu/code/${MODEL_TYPE}_finetuned_model_list.txt"
-
+#mapfile -t FT_MODELS < "/work/tc068/tc068/jiangyue_zhu/code/${MODEL_TYPE}_finetuned_model_list.txt"
+FT_MODELS=("whisper-small_enc_sinewave_cer_5e-05")
 echo "Loaded ${#FT_MODELS[@]} models from ${MODEL_TYPE}_finetuned_model_list.txt"
 
 if [[ "$MODEL_TYPE" == "whisper" ]]; then

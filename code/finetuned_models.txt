@@ -1,3 +1,4 @@
+whisper-small_enc_fast_cer_5e-05
 whisper-small_enc_narrowband_cer_5e-05
 whisper-small_enc_narrowband_mid_only_2_3_cer_5e-05
 whisper-small_enc_reversed_cer_5e-05
