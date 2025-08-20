@@ -117,8 +117,8 @@ def compare_models(
     # ---- Plot full layer × layer heatmap ----
     plt.figure(figsize=(6, 5))
     sns.heatmap(avg_matrix, cmap="coolwarm", vmin=-1, vmax=1,
-                xticklabels=range(L), yticklabels=range(L), annot=True if L <= 12 else False,
-                fmt=".2f", annot_kws={"size": 6})
+                xticklabels=range(L), yticklabels=range(L), annot=True,
+                fmt=".2f", annot_kws={"size": 5})
     plt.xlabel(f"{name_b} layers")
     plt.ylabel(f"{name_a} layers")
 
@@ -152,19 +152,19 @@ if __name__ == "__main__":
     subset = dataset.select(idx)
     print(f"selected {len(subset)} samples")
     subset = subset.map(map_audio)
-    # compare_models(model_narrowband_23, "narrowband 2-3",
-    #                model_narrowband, "narrowband 1-3",
-    #                subset, distortion="narrowband")
+    compare_models(model_narrowband_23, "narrowband 2-3",
+                   model_narrowband, "narrowband 1-3",
+                   subset, distortion="narrowband")
     # compare_models(model_sinewave, "sinewave",
     #                model_reversed, "reversed",
     #                subset, distortion="reversed")
-    compare_models(model_sinewave, "sinewave",
-                   model_baseline, "baseline",
-                   subset, distortion="reversed")
+    # compare_models(model_sinewave, "sinewave",
+    #                model_baseline, "baseline",
+    #                subset, distortion="reversed")
     # compare_models(model_fast, "fast",
     #                model_reversed, "reversed",
     #                subset, distortion="reversed")
 
-    # compare_models(model_fast, "fast",
-    #                model_reversed, "reversed",
-    #                subset, distortion="fast")
+    compare_models(model_fast, "fast",
+                   model_reversed, "reversed",
+                   subset, distortion="fast")
